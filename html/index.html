@@ -1,0 +1,537 @@
+<?include_once $_SERVER['DOCUMENT_ROOT']."/json/sesChk.php"?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Page title -->
+    <title>Coin23 | Main</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css"/>
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="/styles/pe-icons/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="/styles/pe-icons/helper.css"/>
+    <link rel="stylesheet" href="/styles/stroke-icons/style.css"/>
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <link rel="stylesheet" href="/common/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/common/css/default.css">
+</head>
+<body style="background: rgba(39,59,95,1.00)">
+<input type="hidden" name="sesId" value="<?=$sesId?>">
+<input type="hidden" name="sesName" value="<?=$sesName?>">
+<input type="hidden" name="sesBtc" value="<?=$sesBtc?>">
+<input type="hidden" name="sesEth" value="<?=$sesEth?>">
+<input type="hidden" name="rSymbol" value="<?=$symbol?>">
+<input type="hidden" name="loginSt" value="<?=$login?>">
+<!-- Wrapper-->
+<div class="wrapper"  >
+
+    <!-- Header-->
+    <nav class="navbar navbar-default navbar-fixed-top" >
+        <div class="container-fluid" style="background: rgba(00,00,33,1.00) ">
+            <div class="navbar-header">
+                <div id="mobile-menu">
+                    <div class="left-nav-toggle">
+                        <a>
+                            <i class="stroke-hamburgermenu"></i>
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-brand" href="index.html" style="background: rgba(00,00,33,1.00) ">
+                   <img src="images/logo.png" alt="image" width="187" height="37"  />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="left-nav-toggle ">
+                    <a href="">
+                        <i class="stroke-hamburgermenu"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav ">
+<!--
+					<li>
+						<a href="javascript:alert('시스템개선중입니다.')"><span  style="font-size:1.1em; color:#ffffff">거래소 :</span></a>
+					</li>
+-->
+                    <li class=" profil-link">
+                        <a href="trading/btc.html"><span  style="font-size:1.1em; color:#ffffff">거래소 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="wallets.html">
+                        <span style="font-size:1.1em; color:#ffffff">자산 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="custom.html">
+                        <span style="font-size:1.1em; color:#ffffff">고객센터 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="help.html">
+                        <span style="font-size:1.1em; color:#ffffff">이용안내 </span></a>
+                    </li>
+				<li class=" profil-link">
+                      
+                    </li>	
+              </ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class=" profil-link">
+                        <a href="/login.html">
+                        <span style="font-size:1.1em; color:#ffffff">로그인 :</span></a>
+                    </li>
+					<li class=" profil-link">
+                        <a class="aBtn" cKind="logout">
+                        <span style="font-size:1.1em; color:#ffffff">로그아웃 :</span></a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="/register.html">
+                        <span style="font-size:1.1em; color:#ffffff">회원가입 :</span></a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="#">
+                        <span style="font-size:1.1em; color:#ffffff">한국어 </span></a>
+                    </li>
+					<li class=" profil-link">
+              </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End header-->
+</div>
+ <aside class="navigation" style="background: rgba(00,00,33,1.00) ">
+        <nav >
+            <ul class="nav luna-nav">
+                <li>
+                    <a href="register.html"><span style="color:#ffffff">회원가입</span></a>
+                </li>
+                <li>
+                    <a href="login.html"><span style="color:#ffffff">로그인</span></a>
+                </li>
+<!--
+				<li>
+					<a href="javascript:alert('시스템개선중입니다.')"><span style="color:#ffffff">거래소</span></a>
+				</li>
+-->
+				<li>
+					<a href="trading/btc.html"><span style="color:#ffffff">거래소</span></a>
+				</li>
+				<li>
+                    <a href="wallets.html"><span style="color:#ffffff">자산</span></a>
+                </li>
+
+                <li class="nav-info">
+                    <div class="m-t-xs">
+                        <span class="c-white">Example</span> text.
+                        <br/>
+                        <!-- HOW TO REMOVE THIS SECTION -->
+                        <!--<span>
+                            If you don't want to have this section, just remove it from html and in your css replace:
+                            .navigation:before { background-color: #24262d; } with
+                            .navigation:before { background-color: #2a2d35; }
+                            and
+                            .navigation { background-color: #24262d; }</code> with <code>.navigation { background-color: #2a2d35; }
+                        </span>-->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+	
+<div>
+                
+                   <img  src="images/main.png" width="100%" height="60%" />
+              
+        </div>	
+<section class="content" style="background: rgba(39,59,95,1.00)">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>  Coin23 Trading </h3> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-filled" >
+                       
+                        <div class="panel-body">
+                            <div class="table-responsive"> 
+                                <table id="tableExample3" class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="16%">코인이름</th>
+                                        <th width="14%">심벌</th>
+                                        <th width="18%">현재가격 KRW</th>
+                                        <th width="18%">24최고가 KRW</th>
+                                        <th width="18%">24최저가 KRW</th>
+                                        <th width="16%">24거래량 KRW</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+</thead>
+                                    <tbody>
+                                        <tr>
+                                          <td><span style="color:#ffffff"><a href="trading/btc.html">비트코인</a></span></td>
+                                          <td><span style="color:#ffffff">BTC</span></td>
+                                          <td><span id="btc_currentPrice" style="color:#8AB98A">7,500,000</span></td>
+                                          <td><span id="btc_h_24" style="color:#ffffff">7,800,000</span></td>
+                                          <td><span id="btc_l_24" style="color:#ffffff">7,200,000</span></td>
+                                          <td><span id="btc_d_24"  tyle="color:#ffffff">120,000,000</span></td>
+                                      </tr>
+                                      <tr>
+                                          <td><span style="color:#ffffff"><a href="trading/bch.html">비트코인캐시</a></span></td>
+                                          <td><span style="color:#ffffff">BCH</span></td>
+                                          <td><span id="bch_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                          <td><span id="bch_h_24"  style="color:#ffffff">270,000</span></td>
+                                          <td><span id="bch_l_24" style="color:#ffffff">230,000</span></td>
+                                          <td><span id="bch_d_24" style="color:#ffffff">110,000,000</span></td>
+                                        </tr>   
+                                      <tr>
+                                        <td><span style="color:#ffffff"><a href="trading/eth.html">이더리움</a></span></td>
+                                        <td><span style="color:#ffffff">ETH</span></td>
+                                        <td><span id="eth_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                        <td><span id="eth_h_24"  style="color:#ffffff">270,000</span></td>
+                                        <td><span id="eth_l_24" style="color:#ffffff">230,000</span></td>
+                                        <td><span id="eth_d_24" style="color:#ffffff">110,000,000</span></td>
+                                    </tr>
+                                    <tr>
+                                      <td><span style="color:#ffffff"><a href="trading/dash.html">대시</a></span></td>
+                                      <td><span style="color:#ffffff">DASH</span></td>
+                                      <td><span style="color:#8AB98A">500,000</span></td>
+                                      <td><span style="color:#ffffff">550,000</span></td>
+                                      <td><span style="color:#ffffff">490,000</span></td>
+                                      <td><span style="color:#ffffff">30,000,000</span></td>
+                                  </tr>
+                                  <tr>
+                                      <td><span style="color:#ffffff"><a href="trading/ltc.html">라이트코인</a></span></td>
+                                      <td><span style="color:#ffffff">LTC</span></td>
+                                       <td><span id="ltc_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                        <td><span id="ltc_h_24"  style="color:#ffffff">270,000</span></td>
+                                        <td><span id="ltc_l_24" style="color:#ffffff">230,000</span></td>
+                                        <td><span id="ltc_d_24" style="color:#ffffff">110,000,000</span></td>
+                                  </tr>
+                                  <tr>
+                                      <td><span style="color:#ffffff"><a href="trading/etc.html">이더리움클래식</a></span></td>
+                                      <td><span style="color:#ffffff">ETC</span></td>
+                                        <td><span id="etc_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                        <td><span id="etc_h_24"  style="color:#ffffff">270,000</span></td>
+                                        <td><span id="etc_l_24" style="color:#ffffff">230,000</span></td>
+                                        <td><span id="etc_d_24" style="color:#ffffff">110,000,000</span></td>
+                                  </tr>     
+                                  <tr>
+                                    <td><span style="color:#ffffff"><a href="trading/mcc.html">매직코인</a></span></td>
+                                    <td><span style="color:#ffffff">MCC</span></td>
+                                     <td><span id="etc_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                      <td><span id="mcc_h_24"  style="color:#ffffff">270,000</span></td>
+                                      <td><span id="mcc_l_24" style="color:#ffffff">230,000</span></td>
+                                      <td><span id="mcc_d_24" style="color:#ffffff">110,000,000</span></td>
+                                </tr>
+                                    <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/btc.html">비트코인</a></span></td>
+- - >
+										<td><span style="color:#ffffff"><a>비트코인</a></span></td>
+                                        <td><span style="color:#ffffff">BTC</span></td>
+                                        <td><span id="BTC_currentPrice" style="color:#8AB98A">7,500,000</span></td>
+                                        <td><span id="BTC_h_24" style="color:#ffffff">7,800,000</span></td>
+                                        <td><span id="BTC_l_24" style="color:#ffffff">7,200,000</span></td>
+                                        <td><span id="BTC_d_24"  tyle="color:#ffffff">120,000,000</span></td>
+                                    </tr>
+									  <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/bch.html">비트코인캐시</a></span></td>
+- ->
+										<td><span style="color:#ffffff"><a>비트코인캐시</a></span></td>
+                                        <td><span style="color:#ffffff">BCH</span></td>
+                                        <td><span style="color:#8AB98A">500,000</span></td>
+                                        <td><span style="color:#ffffff">550,000</span></td>
+                                        <td><span style="color:#ffffff">490,000</span></td>
+                                        <td><span style="color:#ffffff">20,000,000</span></td>
+                                    </tr>	
+                                    <tr>
+<!--
+                                        <td><span style="color:#ffffff"><a href="trading/eth.html">이더리움</a></span></td>
+- ->
+                                        <td><span style="color:#ffffff"><a>이더리움</a></span></td>
+                                        <td><span style="color:#ffffff">ETH</span></td>
+                                        <td><span id="ETH_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                        <td><span id="ETH_h_24"  style="color:#ffffff">270,000</span></td>
+                                        <td><span id="ETH_l_24" style="color:#ffffff">230,000</span></td>
+                                        <td><span id="ETH_d_24" style="color:#ffffff">110,000,000</span></td>
+                                    </tr>
+									 <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/dash.html">대시</a></span></td>
+- ->
+										<td><span style="color:#ffffff"><a>대시</a></span></td>
+                                        <td><span style="color:#ffffff">DASH</span></td>
+                                        <td><span style="color:#8AB98A">500,000</span></td>
+                                        <td><span style="color:#ffffff">550,000</span></td>
+                                        <td><span style="color:#ffffff">490,000</span></td>
+                                        <td><span style="color:#ffffff">30,000,000</span></td>
+                                    </tr>
+									 <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/ltc.html">라이트코인</a></span></td>
+- ->
+										<td><span style="color:#ffffff"><a>라이트코인</a></span></td>
+                                        <td><span style="color:#ffffff">LTC</span></td>
+                                        <td><span style="color:#8AB98A">59,000</span></td>
+                                        <td><span style="color:#ffffff">60,000</span></td>
+                                        <td><span style="color:#ffffff">58,000</span></td>
+                                        <td><span style="color:#ffffff">30,000,000</span></td>
+                                    </tr>
+									 <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/etc.html">이더리움클래식</a></span></td>
+- ->
+										<td><span style="color:#ffffff"><a>이더리움클래식</a></span></td>
+                                        <td><span style="color:#ffffff">ETC</span></td>
+                                        <td><span style="color:#8AB98A">11,000</span></td>
+                                        <td><span style="color:#ffffff">13,000</span></td>
+                                        <td><span style="color:#ffffff">10,000</span></td>
+                                        <td><span style="color:#ffffff">10,000,000</span></td>
+                                    </tr>		
+                                    <tr>
+<!--
+                                        <td><span style="color:#ffffff"><a href="trading/mcc.html">매직코인</a></span></td>
+- ->
+                                        <td><span style="color:#ffffff"><a>매직코인</a></span></td>
+                                        <td><span style="color:#ffffff">MCC</span></td>
+                                        <td><span style="color:#8AB98A">500</span></td>
+                                        <td><span style="color:#ffffff">700</span></td>
+                                        <td><span style="color:#ffffff">500</span></td>
+                                        <td><span style="color:#ffffff">100,300,000</span></td>
+                                    </tr>
+                                -->
+                                    <tr>
+<!--
+                                        <td><span style="color:#ffffff"><a href="trading/game.html">매직게임</a></span></td>
+-->
+                                        <td><span style="color:#ffffff"><a>매직게임</a></span></td>
+                                        <td><span style="color:#ffffff">GAME</span></td>
+                                        <td><span style="color:#8AB98A">200</span></td>
+                                        <td><span style="color:#ffffff">250</span></td>
+                                        <td><span style="color:#ffffff">150</span></td>
+                                        <td><span style="color:#ffffff">50,600,000</span></td>
+                                    </tr>
+                                    <tr>
+<!--
+										<td><span style="color:#ffffff"><a href="trading/rtlt.html">렌탈토큰</a></span></td>
+-->
+                                        <td><span style="color:#ffffff"><a>렌탈토큰</a></span></td>
+                                        <td><span style="color:#ffffff">RTLT</span></td>
+                                        <td><span style="color:#8AB98A">100</span></td>
+                                        <td><span style="color:#ffffff">190</span></td>
+                                        <td><span style="color:#ffffff">100</span></td>
+                                        <td><span style="color:#ffffff">78,000,000</span></td>
+                                    </tr>
+                                    
+                                   
+                                    </tbody>
+                                </table>
+                            </div>
+ <div id="nowTime"></div>
+                        </div>
+                    </div>
+                </div>
+                   
+				
+				
+ 
+            </div>
+
+        </div>
+    </section>
+	<section class="content" >
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-xs-12">
+<div class="row">
+                <div class="col-lg-12">
+                    
+                   <div>
+                
+                   <img  src="images/main2.png" width="100%" height="70%" />
+              
+        </div>
+				</div>	
+            </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+    </section>
+<section class="content" >
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-xs-12">
+						<div>
+							<a href="/policy/service/index.html" target="_blank">이용약관</a>/<a href="/policy/privacy/index.html" target="_blank">개인정보 취급방침</a>
+						</div>
+						<div style="font-size:14px;">신한 (주)엠에프에이 140-011-571104</div>
+                        <div class="header-title">
+                            <h4>(주)비지씨코리아  대표 : 김종섭 정보책임자 : 정대철</h4>
+
+							<h4>주소 :  이메일 : info<span class="sBtn" cKind="manage">@</span>coin23.io</h4>
+
+                            <h5>
+                                Copyright after 2018 coin23
+                            </h5>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+	<div id="popDiv" style="position:absolute; top:15px; left:15px; z-index:999999; background-color:#FFFFFF; width:450px; height:600px; display:flex; flex-direction:column; padding:15px; border:1px solid #FFFFFF; border-radius:5px; box-shadow:5px 5px 4px 0px #DCDCDC;">
+		<div style="flex:0 0 25px; font-size:18px; font-weight:bold; color:#000000; text-align:center;">공지사항</div>
+		<div style="flex:1 1 auto; overflow-y:auto;">
+			<div style="border:1px solid #FFFFFF; border-radius:5px; background-color:#FFFFFF; padding:8px; color:#000000;">
+				<div>
+					안녕하세요.<br>글로벌 암호화폐거래소 코인23입니다.<br>금일 매직코인(MCC)의 상장과 더불어 MCC구매자 및 거래소 회원가입이벤트를 진행합니다.<br>* 매직코인(MCC) 상장안내<br>- 상장일시 :2018.10.30(화) 오후 1시<br>-거래가능채널 : PC웹, 모바일
+				</div>
+				<div style="font-size:16px; font-weight:bold; margin-top:10px; margin-bottom:10px;">원화입금 전용계좌<br>신한 (주)엠에프에이 140-011-571104</div>
+♥ Coin23 거래소 이벤트 ♥<br>
+일부 이벤트 상향 업그레이드 되었습니다.
+<p>
+★ 거래소 가입 이벤트 ★<br>
+*GMCC 1Coin 당 40원 기준*<br>
+~추천자 GMCC 100개<br>
+~가입자 GMCC 300개
+<p>
+★ Coin23 1달간 거래 수수료 무료<br>
+★ 현금(원화마켓 거래)
+<p>
+@ MCC 구매자 대상 : 125만원 이상~ 구매, 거래자에 한함<br>
+( 1,2,3  이벤트 대상 자격 ) 반드시 5이더리움 구매 내역 필요
+<p>
+@ MCC 이벤트 스냅 샷 기간<br>
+*MCC 상장 10일후  23시59분59초까지 스냅샷
+<p>
+1. MCC 보유량에 1:1 통큰 이벤트<br>
+(모든 유저에 해당함)
+<p>
+* gmcc 지급 날짜 = 상장후 5일이후(gmcc 12월30일 예정) 유동성 있음 *
+<p>
+2. 매직코인 범용 결제 단말기 무료 이벤트<br>
+* 결제 단말기 1000대 선착순 한정<br>
+* 거래소 MCC 100,000개 이상 구매 보유자 = 스냅 샷 기준<br>
+* 알리페이 / 위쳇페이 / 카카오페이 = 매직페이 연동 *<br>
+(매인 코인 MCC) 가맹점,개인간 연동된 코인 결제시 현금 = 바로 통장입금
+<p>
+3. Coin23 거래소 MCC 거래왕 이벤트<br>
+* 거래소 MCC 최대 구매자 조건 * 
+<p>
+* 1등 = GMCC 100,000개 1명<br>
+* 2등 = GMCC 70,000개 1명<br>
+* 3등 = GMCC 50,000개 1명<br>
+* 4등 = GMCC 30,000개 2명<br>
+* 5등 = GMCC 20,000개 3명
+<p>
+* COIN23 거래소 입금후 출금 = 대기 100시간 이후 가능<br>
+★ 위 이벤트 사항은 가격안정화 정책의 일환으로 추진된 구매자를 위한 보너스 개념이라 보시면됩니다. MCC 구매자분에게 감사 이벤트이오니 많은 참여바라며 통큰 혜택도 받아가시길 바랍니다~
+<p>
+* 매수 대기 건은 순매수 금액에 포함되지 않습니다
+<p>
+★상장 및 이벤트 유의사항★
+<p>
+- 출금 제한 기간 중 CASH를 포함하여 코인 종류에 상관없이 출금 시 이벤트 대상에서 제외합니다<br>
+- 상장, 지갑입출금, 이벤트, 당첨자 발표, 보상 지급은 시장과 거래소 상황에 따라 변경될 수 있습니다.<br>
+- 불공정 거래로 간주되는 경우 이벤트 대상에서 제외되며 기 지급한 코인은 회수할 수 있습니다.
+<p>
+★본 이벤트를 해석하는 최종 권리는 Coin23에 있습니다.<br>
+- 제세공과금 대상자는 당첨자 공지후 지정한 기간내 개인정보 활용 미동의 및 개인정보를 Coin23에 전달해 주셔야 하며 정보 미제공시 지급 대상에서 제외됩니다.<br>
+- 이벤트의 경우 당사와 코인 개발사의 사정에 의해 예고없이 변경 혹은 취소될 수 있습니다<br>
+- 투자 시 암호화폐 시장의 특성과 위험도를 충분히 숙지하시길 바라며, Coin23은 이벤트 기간동안 시세 변동으로 인한 손실에 대해 책임지지 않습니다.<br>
+즐거운 Coin23 거래소 이벤트 되세요~<br>
+<p>
+MCC & GMCC
+				<div style="font-size:16px; font-weight:bold;">원화입금 전용계좌<br>신한 (주)엠에프에이 140-011-571104</div>
+			</div>
+
+		</div>
+		<div style="flex:0 0 25px; text-align:right; display:flex; flex-direction:row; justify-content:flex-end; align-items:flex-end;">
+			<!--div style="flex:0 0 85px;">다시보지않기</div-->
+			<div style="flex:1 1 auto;"></div>
+			<div class="btnDiv" cKind="close" cType="popDiv" style="flex:0 0 45px;">닫기</div>
+		</div>
+	</div>
+<script src="/vendor/pacejs/pace.min.js"></script>
+<script src="/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/common/js/jquery-ui.min.js"></script>
+<script src="/common/js/default.js"></script>
+<!-- App scripts -->
+<script src="/getData.js"></script>
+
+<script>
+	$(document).ready(function(){
+       
+		$("#popDiv").draggable();
+
+
+
+        setInterval(function() 
+        {
+
+          getData_BLOCKCHAIN("etc");  
+           getData_BLOCKCHAIN("bch");
+          getData_BLOCKCHAIN("ltc");  
+          getData_BLOCKCHAIN("eth");  
+          getData_BLOCKCHAIN("ech");  
+          getData_BLOCKCHAIN("btc");  
+ 
+            $("#nowTime").html(getTimeStamp());
+          
+        }, 2000);	
+	});//jquery
+
+function getTimeStamp() {
+  var d = new Date();
+  var s =
+    leadingZeros(d.getFullYear(), 4) + '-' +
+    leadingZeros(d.getMonth() + 1, 2) + '-' +
+    leadingZeros(d.getDate(), 2) + ' ' +
+
+    leadingZeros(d.getHours(), 2) + ':' +
+    leadingZeros(d.getMinutes(), 2) + ':' +
+    leadingZeros(d.getSeconds(), 2);
+ 
+  return s;
+}
+
+function leadingZeros(n, digits) {
+  var zero = '';
+  n = n.toString();
+
+  if (n.length < digits) {
+    for (i = 0; i < digits - n.length; i++)
+      zero += '0';
+  }
+  return zero + n;
+}
+</script>
+
+<script src="scripts/luna.js"></script>
+</body>
+
+</html>

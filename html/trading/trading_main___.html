@@ -1,0 +1,1414 @@
+<?if($_REQUEST["pType"]!="pageload"){?>
+<?include_once $_SERVER['DOCUMENT_ROOT']."/skin/index.html"?>
+<?exit;?>
+<?}?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Page title -->
+    <title>Coin23 | Trading</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="../vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css"/>
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="../styles/pe-icons/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="../styles/pe-icons/helper.css"/>
+    <link rel="stylesheet" href="../styles/stroke-icons/style.css"/>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body >
+    <!-- Wrapper-->
+    <div class="wrapper"  >
+
+        <!-- Header-->
+        <nav class="navbar navbar-default navbar-fixed-top" >
+            <div class="container-fluid" style="background: rgba(00,00,33,1.00) ">
+                <div class="navbar-header">
+                    <div id="mobile-menu">
+                        <div class="left-nav-toggle">
+                            <a href="#">
+                                <i class="stroke-hamburgermenu"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-brand" href="../index.html" style="background: rgba(00,00,33,1.00) ">
+                     <img src="../images/logo.png" alt="image" width="187" height="37"  />
+                 </a>
+             </div>
+             <div id="navbar" class="navbar-collapse collapse">
+                <div class="left-nav-toggle ">
+                    <a href="">
+                        <i class="stroke-hamburgermenu"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav ">
+                    <li class=" profil-link">
+                        <a href="../trading/btc.html"><span  style="font-size:1.1em; color:#ffffff">거래소 :</span>
+                        </a>
+                    </li>
+                    <li class=" profil-link">
+                        <a href="../wallets.html">
+                            <span style="font-size:1.1em; color:#ffffff">자산 :</span>
+                        </a>
+                    </li>
+                    <li class=" profil-link">
+                        <a href="../custom.html">
+                            <span style="font-size:1.1em; color:#ffffff">고객센터 :</span>
+                        </a>
+                    </li>
+                    <li class=" profil-link">
+                        <a href="../help.html">
+                            <span style="font-size:1.1em; color:#ffffff">이용안내 </span></a>
+                        </li>
+                        <li class=" profil-link">
+
+                        </li>	
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">  
+                        <li class=" profil-link">
+                            <a href="#" id="trade"> <span style="font-size:1.1em; color:#ffffff"><?=$_SESSION['uID'];?>  로그인 상태 </span>  &nbsp;&nbsp; |  &nbsp;&nbsp;<span style="font-size:1.1em; color:#ffffff">거래내역 :</span></a>
+                        </li>
+                       <li id="logOn" class=" profil-link">
+                            <a href="../login.html"><span style="font-size:1.1em; color:#ffffff">로그인 :</span></a>
+                        </li>
+                          <li id="logOff" class=" profil-link">
+                            <a href="../login.html"><span style="font-size:1.1em; color:#ffffff">로그아웃 :</span></a>
+                        </li>
+
+                        <li class=" profil-link">
+                            <a href="../register.html" id="memberJoin"><span style="font-size:1.1em; color:#ffffff">회원가입 :</span></a>
+                        </li>
+                        <li class=" profil-link">
+                            <a href="#"><span style="font-size:1.1em; color:#ffffff">한국어 </span></a>
+                        </li>
+                        <li class=" profil-link"></li>
+                    </ul>
+                    </div>
+                    </div>
+                </nav>
+                <!-- End header-->
+            </div>
+            <aside class="navigation" style="background: rgba(00,00,33,1.00) ">
+                <nav >
+                    <ul class="nav luna-nav">
+                        <li>
+                            <a href="../register.html"><span style="color:#ffffff">회원가입</span></a>
+                        </li>
+                        <li>
+                            <a href="../login.html"><span style="color:#ffffff">로그인</span></a>
+                        </li>
+                        <li>
+                            <a href="../trading/btc.html"><span style="color:#ffffff">거래소</span></a>
+                        </li>
+                        <li>
+                            <a href="../wallets.html"><span style="color:#ffffff">자산</span></a>
+                        </li>
+
+                        <li>
+                           <a href="../trading/trading_main.html?state=BTC"><span style="color:#ffffff">비트코인(BTC) </span></a>
+                       </li>
+						<li>
+                     <a href="../trading/bch.html"><span style="color:#ffffff">비트코인캐시(BCH) </span></a>
+                </li>
+			  <li>
+                     <a href="../trading/trading_main.html?state=ETH"><span style="color:#ffffff">이더리움(ETH) </span></a>
+                </li>
+				<li>
+                     <a href="../trading/dash.html"><span style="color:#ffffff">대시(DASH) </span></a>
+                </li>
+				<li>
+                     <a href="../trading/ltc.html"><span style="color:#ffffff">라이트코인(LTC) </span></a>
+                </li>
+				<li>
+                     <a href="../trading/etc.html"><span style="color:#ffffff">이더리움클래식(ETC) </span></a>
+                </li>
+                       <li>
+                         <a href="../trading/trading_main.html?state=MCC"><span style="color:#ffffff">매직코인(MCC) </span></a>
+                     </li>
+                     <li>
+                      <a href="../trading/trading_main.html?state=GAME"><span style="color:#ffffff">게임매직(GAME) </span></a>
+                  </li>
+                  <li>
+                     <a href="../trading/trading_main.html?state=RTLT"><span style="color:#ffffff">렌탈토큰(RTLT) </span></a>
+                 </li>
+
+             </ul>
+         </nav>
+     </aside>
+
+     <section id="section" class="content" style="background: rgba(39,59,95,1.00)">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div id="panel1" class="panel panel-filled">
+                        <div class="loader">
+                            <div class="loader-bar"></div>
+                        </div>
+                        <div class="panel-heading">
+                            <div class="panel-tools">
+                                <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                                <a class="panel-close"><i class="fa fa-times"></i></a>
+                            </div>
+                            <span class="view_state" ></span> <span class="c-accent">현재가 : </span><span id="now_price" class="c-accent"></span><span class="c-accent">KRW</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flotExample2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="panel2" class="panel panel-filled">
+                        <div class="loader">
+                            <div class="loader-spin"></div>
+                        </div>
+                        <div class="panel-heading">매수호가<span class="c-accent"><span class="view_state" ></span> </span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive" style="overflow-y:auto; height: 300px;">
+                              <table id="table_buy" class="table table-hover table-striped table-bordered table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th width="39%">호가(<span class="view_state" ></span>)</th>
+                                        <th width="31%">매수량(<span class="view_state" ></span>)</th>
+                                        <th width="30%">누적수량(<span class="view_state" ></span>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="panel1" class="panel panel-filled">
+                        <div class="loader">
+                            <div class="loader-bar"></div>
+                        </div>
+                        <div class="panel-heading">
+                            <div class="panel-tools">
+                                <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                                <a class="panel-close"><i class="fa fa-times"></i></a>
+                            </div>
+                            매수/매도 <span class="c-accent"><span class="view_state" ></span></span>
+                        </div>
+                        <div class="panel-body">
+                          <div class="col-lg-6"> 
+
+                            <div class="ibox float-e-margins">
+                             <div class="ibox-title">
+                                <h5>매수신청 </h5>
+                            </div>
+                            <div class="ibox-content">
+                                <!-- <form class="form-horizontal"  name="form_buying" id="form_buying"  action="" m<span class="view_state" ></span>od="post"> -->
+                                    <div class="form-horizontal"  >
+                                        <div class="form-group"><label class="col-lg-3 control-label" >매수가능(KRW)</label>
+                                            <div class="col-lg-7"><input type="text" id="buy_pos" name="buy_pos" value="" class="form-control" readonly> 
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label class="col-lg-3 control-label">매수호가</label>
+                                          <div class="col-lg-7">
+                                            <input type="text" id="buy_money" name="buy_money" value="" class="form-control onlynum">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="col-lg-3 control-label">매수수량</label>
+                                      <div class="col-lg-7"><input type="text" id="buy_amount" name="buy_amount" class="form-control onlynum">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                   <label class="col-lg-3 control-label">(KRW)금액</label>
+                                   <div class="col-lg-7"><input type="text" id="buy_KRW" name="buy_money" class="form-control" readonly>
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                <div class="col-lg-offset-3 col-lg-7" align="center">
+                                    <button  id="buy"  class="btn btn-primary" type="submit" onClick="">매수신청</button>
+                                </div>
+                            </div>
+                        </div><!--  </form> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6"> 
+                <div class="ibox float-e-margins">
+                   <div class="ibox-title">
+                    <h5>매도신청 </h5>
+                </div>
+                <div class="ibox-content">
+                    <!-- <form class="form-horizontal" name="form_sell" id="form_sell" action="" method="post"> -->
+                        <div class="form-horizontal" name="form_sell" id="form_sell" action="" method="post">
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label" >매도가능(<span class="view_state" ></span>)</label>
+                                <div class="col-lg-7"><input type="text" id="sell_pos" name="sell_pos" value="" class="form-control" readonly> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-lg-3 control-label">매도호가</label>
+                              <div class="col-lg-7"><input type="text" id="sell_money" name="sell_money" value="" class="form-control onlynum"> 
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-lg-3 control-label">매도수량</label>
+                              <div class="col-lg-7"><input type="text" id="sell_amount" name="sell_amount" class="form-control onlynum" > 
+                              </div>
+                          </div>
+                          <div class="form-group">
+                           <label class="col-lg-3 control-label">(KRW)금액</label>
+                           <div class="col-lg-7"><input type="text" id="sell_KRW" name="sell_KRW" class="form-control" readonly> 
+                           </div>
+                       </div>
+
+                       <div class="form-group">
+                        <div class="col-lg-offset-3 col-lg-7" align="center">
+                            <button id="sell" class="btn btn-primary" type="submit" >매도신청</button>
+                        </div>
+                    </div>
+                </div><!--  </form> -->
+            </div>
+        </div>
+    </div>           
+</div>
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+    <div id="panel2" class="panel panel-filled">
+        <div class="loader">
+            <div class="loader-spin"></div>
+        </div>
+        <div class="panel-heading">
+            <div class="panel-tools">
+                <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                <a class="panel-close"><i class="fa fa-times"></i></a>
+            </div>
+            매도호가 <span class="c-accent"><span class="view_state" ></span></span>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive" style="overflow-y:auto; height: 300px;">
+                <table id="table_sell" class="table table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th width="39%">호가(<span class="view_state" ></span>)</th>
+                            <th width="31%">매도량(<span class="view_state" ></span>)</th>
+                            <th width="30%">누적수량(<span class="view_state" ></span>)</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div id="panel1" class="panel panel-filled">
+            <div class="loader">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="panel-heading">
+                <div class="panel-tools">
+                    <a class="panel-toggle"><i class="fa fa-chevron-up"></i></a>
+                    <a class="panel-close"><i class="fa fa-times"></i></a>
+                </div>
+            현재 주문</div>
+            <div class="panel-body">
+                <div class="table-responsive" style="overflow-y:auto; height: 400px;">
+                    <table id="deal_list" class="table table-hover table-striped table-bordered table-condensed">
+                       <thead>
+                        <tr>
+                            <th width="17%">코인이름</th>
+                            <th width="13%">매수/매도</th>
+                            <th width="25%">호가</th>
+                            <th width="25%">주문량</th>
+                            <th width="20%">주문 취소</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div id="panel2" class="panel panel-filled">
+        <div class="loader">
+            <div class="loader-spin"></div>
+        </div>
+        <div class="panel-heading">체결<span class="c-accent"><span class="view_state" ></span></span>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive" style="overflow-y:auto; height: 400px;">
+                <table id="transactions_history" class="table table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th width="28%">날짜시간</th>
+                            <th width="12%">매수/매도</th>
+                            <th width="18%">체결가 <span class="view_state" ></span></th>
+                            <th width="22%">체결량 <span class="view_state" ></span></th>
+                            <th width="20%">금액</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!--my-dialog-->
+<div id="dialog-background">
+    <div id="my-dialog">
+        <div style="width: 100%;height: 36px;background-color: #000; color: #fff;padding-top: 6px;font-size: 1.3em;font-weight: bold; " >
+           <div style="width: calc(100%-50px); height:40px;display: inline-block;padding-left: 10px;"> 매수 주문</div>
+           <div id="btn-close-dialog" style="width: 40px;display: inline-block;float: right;"> X </div>
+       </div>
+
+       <div style="width: 100%; height: 280px; color: #000; padding-left: 10px;">
+
+        <div style="width: 100%;height: 30px;margin-top: 20px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">거래주소</div>
+            <div id="myWallet_modal" style="width: 540px;height:24px; display: inline-block; background-color: #DADADA;padding-left: 10px;">  </div>
+        </div>
+
+        <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">화폐종류</div>
+            <div id="coinKind" style="width: 540px;height:24px;display: inline-block;background-color: #DADADA; padding-left: 10px;"> </div>
+        </div>
+ 
+        <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">거래호가</div>
+            <div id="modal_trading_money" style="width: 540px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;"> </div>
+        </div>
+        <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">거래수량</div>
+            <div id="modal_trading_amount" style="width: 540px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">
+                <!-- <input type="number" id="modal_trading_amount" name="modal_trading_amount" /> -->
+            </div>
+        </div>
+        <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">거래금액</div>
+            <div id="modal_trading_sum" style="width: 540px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">  </div>
+        </div>
+
+        <div style="width: 100%;height: 140px; margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:auto; display: inline-block;vertical-align: top;">내 정보 </div>
+            <div id="modal_myBalance" style="width: 540px;height:auto; display: inline-block;  padding-right: 10px;">  
+                 <!-- <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+                    <div style="width: 100px;height:24px;display: inline-block;">코인</div>
+                    <div id="span_myCOIN" style="width:400px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">  </div>
+                </div>
+ -->
+                <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+                    <div style="width: 100px;height:24px;display: inline-block;">포인트</div>
+                    <div id="span_myPOINT" style="width: 400px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">  </div>
+                </div>
+
+                <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+                    <div style="width: 100px;height:24px; display: inline-block;">MCC</div>
+                    <div id="span_myMCC" style="width:400px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">  </div>
+                </div>
+
+                <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+                    <div style="width: 100px;height:24px;display: inline-block;">KRW</div>
+                    <div id="span_myKRW" style="width: 400px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;">  </div>
+                </div>
+
+            </div>
+        </div>
+
+
+ <!--        <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block;">거래 수량</div>
+            <div id="modal_trading_money" style="width: 540px;height:24px;display: inline-block;text-align: right; background-color: #DADADA; padding-right: 10px;"> 3,000,000</div>
+        </div>
+
+        <div style="width: 100%;height: 160px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+            <div style="width: 100px;height:24px;display: inline-block; vertical-align: top;">메모</div>
+            <div style="width:540px;height:100%;display: inline-block;">
+                <textarea style="width: 100%; height: 96%;display: block;"> 메모 </textarea>
+            </div>
+        </div> - - >
+        <div style="clear:both;"></div>
+           <! --   <div style="width: 100%;height: 30px;margin-top: 4px; border-bottom: 1px #DADADA solid;">
+                <div style="width: 100px;height:24px;display: inline-block;"></div>
+                <div style="width: calc(100%-110px);height:24px;display: inline-block;"></div>
+            </div>  -->
+        </div>
+        <div style="width: 100%; height: 30px; text-align: center; margin-top: 20px; ">
+            <button id="btn-conclusion" style="width: 86%;height: 30px; color: #000;">채결</button>
+        </div>
+    </div>
+</div>
+<!--my-dialog-->
+
+<!--my-TradeList-->
+<div id="dialog-TradeList-background">
+    <div id="my-TradeList-dialog_wrap">
+        <div style="width: 100%;height: 36px;background-color: #000; color: #fff;padding-top: 6px;font-size: 1.3em;font-weight: bold; " >
+           <div style="width: calc(100%-50px); height:40px;display: inline-block;padding-left: 10px;"> 거래내역 </div>
+           <div id="btn-close-dialog-mylist" style="width: 40px;display: inline-block;float: right;"> X </div>
+       </div>
+       <div id="my-TradeList-dialog" style="width: 100%; min-height: 560px; color: #000; padding-left: 10px; margin: 20px 0px;">
+ 
+  
+        </div>
+        <div style="width: 100%; height: 30px; text-align: center; margin-top: 20px;border-top: 20px; ">
+            <button id="btn-mylist" style="width: 86%;height: 30px; color: #000;">닫기</button>
+        </div>
+    </div>
+</div>
+<!--my-TradeList-->
+ 
+
+
+<section class="content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="header-title">
+                    <h4>(주)비지씨코리아  대표 : 김종섭 정보책임자 : 정대철</h4>
+							<h4>주소 :  이메일 : info@coin23.io</h4>
+                    <h5>
+                        Copyright after 2018 coin23
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
+<input type="hidden" id="loginState" />
+<input type="hidden" id="trading_COIN" value="<?=$trading_COIN;?>" />
+<input type="hidden" id="myWallet" />
+<input type="hidden" id="myCOIN" />
+<input type="hidden" id="myPOINT" />
+<input type="hidden" id="myMCC" />
+<input type="hidden" id="myKRW" />
+ <input type="hidden" id="state" value="<?=$STATE;?>">
+<input type="hidden" id="uID" value="<?=$trading_uID;?>">
+
+<script src="../vendor/pacejs/pace.min.js"></script>
+<script src="../vendor/jquery/dist/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/flot/jquery.flot.min.js"></script>
+<script src="../vendor/flot/jquery.flot.resize.min.js"></script>
+<script src="../vendor/flot/jquery.flot.spline.js"></script>	
+<!-- App scripts -->
+<script src="../scripts/luna.js"></script>
+<!-- thomas -->
+ 
+<script>
+    $(document).ready(function ()
+    {
+
+        var state = $("#state").val(); 
+        var trading_uID = $("#uID").val(); 
+        var loginState = $("#myCOIN").val();
+
+        memData(trading_uID);
+        trading_list(trading_uID);
+
+        $("#trade").hide();
+        $("#logOff").hide();
+        $("#logMsg").hide(); 
+
+        if( $("#uID").val())
+        {
+            $("#logOn").hide();
+            $("#memberJoin").hide();
+
+            $("#trade").show();
+            $("#logOff").show();
+            $("#logMsg").show();
+        }
+
+        $(".view_state").text(state); 
+
+
+        $(".onlynum").keyup(function(){$(this).val( $(this).val().replace(/[^0-9]/g,"") ); } );
+
+
+
+        var data_mcc = [ [0, 6], [1, 9], [2, 8], [3, 9], [4, 10], [5, 14], [6, 12], [7, 12],
+        [8, 14], [9, 12], [10, 11], [11, 15], [12, 14], [13, 19], [14, 15], [15, 15],
+        [16, 16], [17, 12], [18, 13], [19, 15], [20, 10], [21, 18], [22, 20], [23, 23],
+        [24, 18], [25, 21], [26, 14], [27, 17], [28, 15], [29, 14], [30, 11], [31, 19]];
+
+
+        var data1 = [ [0, 3], [1, 6], [2, 8], [3, 9], [4, 10], [5, 14], [6, 15], [7, 12],
+        [8, 14], [9, 12], [10, 11], [11, 15], [12, 14], [13, 19], [14, 15], [15, 15],
+        [16, 16], [17, 12], [18, 13], [19, 15], [20, 10], [21, 18], [22, 20], [23, 23],
+        [24, 22], [25, 21], [26, 20], [27, 17], [28, 15], [29, 14], [30, 11], [31, 19]];
+
+        var data2 = [ [0, 22], [1, 8], [2, 8], [3, 9], [4, 16], [5, 14], [6, 15], [7, 12],[8, 14], 
+        [9, 12], [10, 11], [11, 15], [12, 14], [13, 19], [14, 15], [15, 15],
+        [16, 16], [17, 12], [18, 13], [19, 15], [20, 10], [21, 18], [22, 20], [23, 23],
+        [24, 22], [25, 21], [26, 20], [27, 17], [28, 15], [29, 14], [30, 11], [31, 19]];
+
+        var chartUsersOptions = {
+            lines: {
+                show: true,
+                fill: false,
+                lineWidth: 2,
+                fillColor: "#f6a821"
+            },
+            grid: {
+                borderWidth: 0
+            }
+        };
+
+        var prevData = 0;
+
+        $("#modal_trading_amount").bind('keyup mouseup', function () {
+            var current = $("#modal_trading_amount").val();
+
+
+            if(current > prevData ){
+               $("#v").val(current);
+               var newv = $("#v").val(); 
+               alert(newv); 
+
+               $("#modal_trading_amount").val();
+           } 
+
+
+           if( current < prevData){
+               $("#v").val(current);
+               var newv = $("#v").val(); 
+               alert(newv); 
+           } 
+       });  
+
+        if(state=="BTC")
+        {
+            $("#now_price").text("7,248,000");
+            $("#buy_pos").val("7,248,000");
+            $("#buy_KRW").val("7,348,000");
+            $("#sell_pos").val("7,448,000");
+            $("#sell_KRW").val("7,349,000");
+
+            $.plot($("#flotExample2"), [data1], chartUsersOptions);
+            setInterval(function() {getData_BTC(); getState_BTC();}, 6000); 
+        }
+        else if(state=="ETH")
+        {
+            $("#now_price").text("250,000");
+            $("#buy_pos").val("2,248,000");
+            $("#buy_KRW").val("2,348,000");
+            $("#sell_pos").val("2,448,000");
+            $("#sell_KRW").val("2,349,000");
+
+
+            $.plot($("#flotExample2"), [data2], chartUsersOptions);
+
+            setInterval(function() {getData_ETH(); getState_ETH();}, 6000); 
+        }
+        else
+        {
+
+            $("#now_price").text("520");
+            //$("#buy_pos").val("500");
+            $("#buy_KRW").val("500");
+            //$("#sell_pos").val("448");
+            $("#sell_KRW").val("448");
+
+
+            
+            $.plot($("#flotExample2"), [data_mcc], chartUsersOptions);
+
+
+            setInterval(function() {mcc_buy();mcc_sell();   trading_deal_list(); }, 6000); 
+        }
+
+/*
+기본 MCC
+*/
+        //alert("state " +$("#state").val());
+       //setInterval(function() {getData_ETH(); getState_ETH();}, 6000)trading_list(trading_uID);; 
+       setInterval(function() {mcc_buy();mcc_sell();  trading_deal_list(); }, 6000); 
+
+
+
+        ////////////////////
+        $('#section').on('click',".btn-primary", function() { 
+
+            //if(!$("#loginState").val())
+            if(!$("#uID").val())
+            {
+                alert("로그인 하시거나 회원이 되시면  사용가능 합니다.")
+                return false;
+            }
+
+            var thisID = $(this).attr("id");  
+            var coin_name ="";
+            var trading_state ="";
+            var trading_state_str ="";
+            var Trader_wallet = $("#myWallet").val();
+            var trading_money ="";
+            var trading_amount ="";
+            var t5 ="";
+
+            if(thisID == "buy")
+            {
+
+                if(!$("#buy_money").val())
+                { 
+                    alert("매수호가를 입력해 주세요");
+                    $("#buy_money").focus();
+                    return false;
+                }
+
+                if(!$("#buy_amount").val())
+                { 
+                    alert("매수수량을 입력해 주세요");
+                    $("#buy_amount").focus();
+                    return false;
+                }
+
+
+                coin_name = state;
+                trading_state_str = "매도";
+                trading_state = "B";
+                trading_money = $("#buy_money").val();
+                trading_amount = $("#buy_amount").val(); 
+
+            }else{
+
+                if(!$("#sell_money").val())
+                { 
+                    alert("매도호가를 입력해 주세요");
+                    $("#sell_money").focus();
+                    return false;
+                }
+
+
+                if(!$("#sell_amount").val())
+                { 
+                    alert("매도수량을 입력해 주세요");
+                    $("#sell_amount").focus();
+                    return false;
+                }
+
+                coin_name = state;
+                trading_state_str = "매수";
+                trading_state     = "S";
+                trading_money     = $("#sell_money").val();
+                trading_amount    = $("#sell_amount").val(); 
+
+            }//buy
+
+            var d = new Date();
+
+            var now = d.getFullYear()+"-"+(d.getMonth() + 1) +"-"+ d.getDate() +" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+
+
+            var objTrading = new Object();
+            objTrading.coin_name      = coin_name;
+            objTrading.trading_state  = trading_state;
+            objTrading.trading_money  = trading_money;
+            objTrading.trading_amount = trading_amount;
+            objTrading.trading_uID    = trading_uID;
+            objTrading.myWallet        = myWallet; 
+            objTrading.trading_time   = now;
+
+
+            $.post( "trading.php", { data: objTrading })
+            .done(function( data ) {
+                alert( "Data Loaded: " + data );
+            });
+
+
+            var trLength =  $("#order_list tbody tr").length+1;
+            var orderState = "<tr id='tr_ord"+trLength+"'>";
+            orderState += "<td>"+coin_name+"</td>";
+            orderState += "<td>"+trading_state_str+"</td>";
+            orderState += "<td style='text-align: right;'>"+comma(trading_money)+"</td>";
+            orderState += "<td style='text-align: right;'>"+comma(trading_amount)+"</td>";
+            orderState += "<td><a href='#'' id='ord"+trLength+"' class='btn btn-cancle btn-w-md btn-success btn-squared'>취소</a></td>";
+            orderState += "</tr>";
+
+            $('#order_list tr:first').after(orderState); 
+
+
+        }); 
+ 
+
+
+
+//modal 닫기
+        //modal
+        $('#btn-close-dialog').on('click', function() { 
+            $("#dialog-background").hide();
+        }); //modal 닫기
+
+
+        $('#btn-close-dialog-mylist').on('click', function() { 
+            $("#dialog-TradeList-background").hide();
+        }); //modal 닫기
+
+
+        $('#btn-mylist').on('click', function() { 
+            $("#dialog-TradeList-background").hide();
+        }); //modal 닫기
+
+
+
+        ///거래 채결 
+ var objTradingContract = new Object();
+
+
+        //주문
+        $('#section').on('click',".btn-order", function() 
+        { 
+            if(!$("#uID").val())
+            {
+                alert("로그인 하시거나 회원이 되시면  사용가능 합니다.")
+                return false;
+            }
+
+            var thisID = $(this).attr("id");  
+ 
+            var idx = thisID.split("_")[1];
+            var coinKind = thisID.split("_")[2];
+            var money   = thisID.split("_")[3];
+            var amount  = thisID.split("_")[4];
+            var trading_kind = thisID.split("_")[5];
+            var sum     = 0;
+            var wallet  = $("#trading_wallet").val();
+            var MyBalance = $("#trading_COIN").val();
+
+            var myPOINT = $("#myPOINT").val();
+    
+            var myMCC   = $("#myMCC").val();
+            var myKRW   = $("#myKRW").val();
+            var myWallet = $("#myWallet").val();
+
+            $("#myWallet_modal").html(myWallet);
+            $("#span_myCOIN").html(comma(MyBalance)); 
+            $("#span_myPOINT").html(comma(myPOINT)); 
+            $("#span_myMCC").html(comma(myMCC)); 
+            $("#span_myKRW").html(comma(myKRW)); 
+ 
+
+            $("#myCOIN").html(comma(MyBalance)); 
+ 
+                $("#coinKind").html(coinKind);
+                $("#modal_trading_money").html(comma(money));
+                $("#modal_trading_amount").html(comma(amount));
+                sum = money * amount;
+                $("#modal_trading_sum").html(comma(sum));
+
+               // var chkState = chkMyBalance(MyBalance,amount);
+                var buyer_wallet = $("#myWallet").val();
+
+               
+                objTradingContract.idx          = idx;  
+                objTradingContract.buyer_uID    = trading_uID;
+                objTradingContract.buyer_amount = amount; 
+                objTradingContract.buyer_allet  = myWallet; 
+                
+                $("#dialog-background").show(); 
+
+//                }else{
+//                    var  msg= "잔고가 부족합니다.\n내잔고:" +MyBalance+"\n매도수량:"+amount;
+//                    alert( msg);
+//                } 
+                
+//            }else{
+//              alert( "모다달 안뜨야핸: "  );
+//          }
+
+
+        }); //메수 신청 
+
+
+        $('#btn-conclusion').on('click', function() { 
+            //alert("채결을 선택하셨습니다.\n블록에 등록하는 프로세스를 진행합니다.")   ; 
+            contract(objTradingContract);
+            $("#dialog-background").hide();
+        });
+
+
+
+        //취소 
+        $('#section').on('click',".btn-cancle", function() { 
+            var thisID = $(this).attr("id");  
+            //alert( state+"_cancel.html: " + thisID); 
+            var idx = thisID.split("_")[1];
+            $.post( "trading_cancel_update.php", { idx: idx }).done(function( data ) 
+            {
+                alert( "취소했습니다." );
+                trading_list(trading_uID);
+            });//$.post 
+
+        }); 
+ 
+        //거래내역
+        $('#trade').on('click', function() { 
+
+            $("#dialog-TradeList-background").show();
+            trading_mylist("my-TradeList-dialog",trading_uID);             
+        }); 
+
+
+    });//doc
+
+
+
+
+function contract(objTradingContract) 
+{ 
+
+    $.post( "trading_update.php", { data: objTradingContract }).done(function( data ) 
+    {
+        alert( "채결신청완료: "   );
+    });//$.post 
+
+}
+
+function chkMyBalance(wallet,myBalance,amount) 
+{
+
+
+    var clacState = Number(myBalance)> Number(amount)? true : false;
+    /* $.post( "getMyBalance.php", { wallet: wallet })
+            .done(function( data ) {
+                alert( "내 작고확인 : 1,000,000 " + data );
+                myBalance = 1000000;
+                $('#modal_myBalance').html(myBalance); 
+ 
+            });//$.post*/
+
+    //$('#modal_myBalance').html(comma(myBalance));  
+    ///alert(  Number(myBalance)+"; " + Number(amount)+"|| "+clacState );
+    return clacState;
+
+
+}
+
+function trading_list(loginID) 
+{
+
+
+    var jURL ="trading_deal_list.php";
+    var  param =  {trade_state: 1};
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: jURL,
+        data:param,
+        cache: false,
+        //dataType: "json",
+        success: function(data)
+        {
+
+            var obj = $.parseJSON(data);
+            var tmpText = "";
+            var deal_list = "";
+            var registerID = "";
+
+            for(var i in obj)
+            {
+
+                registerID = obj[i].trading_uID;
+
+                if(obj[i].trading_kind =="B")
+                {
+                    tmpText = "매도";
+                    tmpText2 = "매수";
+                }
+                else if(obj[i].trading_kind =="S")
+                {   
+                    tmpText = "매수";
+                    tmpText2 = "매도";
+                }
+
+                deal_list+="<tr id='tr_ord_"+obj[i].idx+"'>";
+                deal_list+="    <td><span class='view_state' >"+obj[i].coin_name+"</span></td>";
+                deal_list+="    <td>"+tmpText+"</td>";
+                deal_list+="    <td style='text-align: right;'>"+comma(obj[i].trading_money)+"</td>";
+                deal_list+="    <td style='text-align: right;'>"+comma(obj[i].trading_amount)+"</td>";
+                
+                deal_list+="    <td>";
+               /// if(loginState)
+               /// {
+                if(loginID == registerID)
+                {
+                    deal_list+="        <a href='#' id='ord_"+obj[i].idx+"' class='btn btn-cancle btn-w-md btn-success btn-squared'>취소</a>";
+
+                }else{
+                    deal_list+="        <a href='#' id='order_"+obj[i].idx+"_"+obj[i].coin_name+"_"+obj[i].trading_money+"_"+obj[i].trading_amount+"_"+obj[i].trading_kind+"' class='btn btn-order btn-w-md btn-success btn-squared'>거래</a>";
+
+                }
+           
+                deal_list+="    <td>";
+                deal_list+="</tr>";
+
+
+            } 
+
+
+
+            $('#deal_list tr:first').after(deal_list); 
+
+
+        },
+        error:function(e){
+            alert(" lawData 에러  ");
+        }
+    });
+
+}//func trading_list
+
+
+function trading_mylist(divID,loginID) 
+{
+
+
+    var jURL ="trading_deal_mylist.php";
+    var  param =  {loginID:loginID};
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: jURL,
+        data:param,
+        cache: false,
+        //dataType: "json",
+        success: function(data)
+        {
+
+            var obj = $.parseJSON(data);
+            var tmpText = "";
+            var deal_list = "";
+            var registerID = "";
+
+                deal_list+="<div  style='width:100%; height :30px; border-bottom: 1px #000 solid;padding-top:5px;'>";
+                deal_list+="    <div  class='view_state' style='width:13%; display:inline-block;'> 날짜 </div>";
+                deal_list+="    <div  class='view_state' style='width:5%; display:inline-block;'> coin </div>";
+                deal_list+="    <div style='width: 5%; display:inline-block;'>구분</div>";
+                deal_list+="    <div style='text-align: right; width:5%; display:inline-block;>금액</div>";
+                deal_list+="    <div style='text-align: right; width:5%; display:inline-block;'>수량</div>";
+                
+                deal_list+="    <div style=' width:13%; display:inline-block; '>거래자</div>";
+                 deal_list+="    <div style=' width:40%; display:inline-block; '>거래자주소</div>";
+                deal_list+="    <div style=' width:10%; display:inline-block;'> 구분 </div>";
+                deal_list+="</div>";
+
+            for(var i in obj)
+            {
+
+                registerID = obj[i].trading_uID;
+
+                if(obj[i].trading_kind =="B")
+                {
+                    tmpText = "매도";
+                    tmpText2 = "매수";
+                }
+                else if(obj[i].trading_kind =="S")
+                {   
+                    tmpText = "매수";
+                    tmpText2 = "매도";
+                }
+
+                deal_list+="<div id='tr_ord_"+obj[i].idx+"'  style='width:100%;height :30px; border-bottom: 1px #dadada solid;'>";
+                deal_list+="    <div  class='view_state' style='width:13%; display:inline-block;'>"+obj[i].trading_date.substring( 0, 10 )+"</div>";
+                deal_list+="    <div  class='view_state' style='width:5%; display:inline-block;'>"+obj[i].coin_name+"</div>";
+                deal_list+="    <div style='width: 5%; display:inline-block;'>"+tmpText+"</div>";
+                deal_list+="    <div style='text-align: right; width:5%; display:inline-block;>"+comma(obj[i].trading_money)+"</div>";
+                deal_list+="    <div style='text-align: right; width:5%; display:inline-block;'>"+comma(obj[i].trading_amount)+"</div>";
+                
+                deal_list+="    <div style=' width:13%; display:inline-block; background-color: #DADADA;padding-left:5px;'>"+obj[i].buyer_uID+"</div>";
+                 deal_list+="    <div style=' width:40%; display:inline-block; background-color: #DADADA;padding-left:5px;'>"+obj[i].buyer_wallet+"</div>";
+
+                if(obj[i].trading_amount > 0)
+                   deal_list+="    <div style=' width:10%; display:inline-block;padding-left:5px;'>거래완료</div>";
+                else{
+                    deal_list+="    <div style=' width:10%; display:inline-block;padding-left:5px;'>";
+                    deal_list+="        <div style=' width:45%; display:inline-block;'  id='order_"+obj[i].idx+"_"+obj[i].coin_name+"_"+obj[i].trading_money+"_"+obj[i].trading_amount+"_"+obj[i].trading_kind+"' class=''>거래 </div> ";
+                    deal_list+="        <div style=' width:45%; display:inline-block;' id='ord_"+obj[i].idx+"' class=' '>취소 </div>";
+                    deal_list+="    </div>";
+                }
+
+                deal_list+="</div>";
+
+
+            } 
+
+
+
+            $('#'+divID).html(deal_list); 
+
+
+        },
+        error:function(e){
+            alert(" lawData 에러  ");
+        }
+    });
+
+}//func trading_mylist
+
+
+// 현재 채결 
+function trading_deal_list()
+{
+
+
+    var jURL ="trading_deal_ok_list.php";
+    var  param =  {trade_state: 1};
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: jURL,
+        data:param,
+        cache: false,
+        //dataType: "json",
+        success: function(data)
+        {
+
+            var obj = $.parseJSON(data);
+            var tmpText = "";
+            var deal_list = "";
+            var sum = 0;
+            var trading_money= 0;
+            var trading_amount= 0;
+
+            for(var i in obj)
+            {
+                trading_money=obj[i].trading_money;
+                trading_amount= obj[i].trading_amount;
+                if(obj[i].trading_kind =="B")
+                    tmpText = "매도";
+                else    if(obj[i].trading_kind =="S")
+                    tmpText = "매수";
+
+                deal_list+="<tr id='tr_ord_"+obj[i].idx+"'>";
+                deal_list+="    <td> "+obj[i].account_date+" </td>";
+                deal_list+="    <td>"+tmpText+"</td>";
+                deal_list+="    <td style='text-align: right;'>"+comma(trading_money)+"</td>";
+                deal_list+="    <td style='text-align: right;'>"+comma(trading_amount)+"</td>";
+
+
+                sum = trading_money *  trading_amount;
+
+                deal_list+="    <td style='text-align: right;'>"+comma(sum)+"</td>";
+                deal_list+="</tr>"; 
+            }  
+
+            //$('#transactions_history tr:first').after(deal_list);  
+
+             $('#transactions_history>tbody').html(deal_list); 
+
+
+        },
+        error:function(e){
+            alert(" transactions_history 에러  ");
+        }
+    });
+}//function trading_deal_list()
+
+
+function getData_BTC(){
+   var url = "https://api.bithumb.com/public/ticker";
+   $.getJSON(url, function(result){ 
+    var data = "";
+    data = [result.data];
+
+    var buy_price = "<tr'>"
+    buy_price += "<td>"+comma(data[0].buy_price)+" | "+data[0].date+"</td>";
+    buy_price += "<td>"+data[0].units_traded+"</td>";
+    buy_price += "<td>누적수량(BTC)</td>";
+    buy_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+
+                 var sell_price = "<tr'>"
+                 sell_price += "<td style='text-align: right;'>"+comma(data[0].sell_price)+" | "+data[0].date+"</td>";
+                 sell_price += "<td>"+data[0].units_traded+"</td>";
+                 sell_price += "<td>"+data[0].volume_7day+"</td>";
+                 sell_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+                 $('#table_buy tr:first').after(buy_price); 
+                 $('#table_sell tr:first').after(sell_price); 
+             });   
+}
+
+
+function getState_BTC(){
+   var url = "https://api.bithumb.com/public/transaction_history";
+   $.getJSON(url, function(result){ 
+    var data = "";
+    data =  result.data ;
+
+    var tmpType="";
+
+    for (i in result.data) {
+               // alert(result.data[i].cont_no );
+               if(result.data[i].type=="ask")
+                tmpType = "매도";
+            else
+                tmpType = "매수";
+
+            var transState = "<tr'>"
+            transState += "<td>"+result.data[i].transaction_date +"</td>";
+            transState += "<td>"+tmpType+"</td>";
+            transState += "<td align='right'>"+comma(result.data[i].price)+"</td>";
+            transState += "<td align='right'>"+result.data[i].units_traded+"</td>";
+            transState += "<td align='right'>"+comma(result.data[i].total)+"</td>";
+            transState += "</tr>";
+                 //$('#buy').prepend(appendData);  
+                 $('#transactions_history tr:first').after(transState); 
+             }
+             
+         });
+}
+
+
+function getData_ETH(){
+   var url = "https://api.bithumb.com/public/ticker";
+   $.getJSON(url, function(result){ 
+    var data = "";
+    data = [result.data];
+
+    var buy_price = "<tr'>"
+    buy_price += "<td>"+comma(data[0].buy_price)+" | "+data[0].date+"</td>";
+    buy_price += "<td>"+data[0].units_traded+"</td>";
+    buy_price += "<td>누적수량(BTC)</td>";
+    buy_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+
+                 var sell_price = "<tr'>"
+                 sell_price += "<td style='text-align: right;'>"+comma(data[0].sell_price)+" | "+data[0].date+"</td>";
+                 sell_price += "<td>"+data[0].units_traded+"</td>";
+                 sell_price += "<td>"+data[0].volume_7day+"</td>";
+                 sell_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+                 $('#table_buy tr:first').after(buy_price); 
+                 $('#table_sell tr:first').after(sell_price); 
+             });   
+}
+
+
+function getState_ETH(){
+   var url = "https://api.bithumb.com/public/transaction_history";
+   $.getJSON(url, function(result){ 
+    var data = "";
+    data =  result.data ;
+
+    var tmpType="";
+
+    for (i in result.data) {
+               // alert(result.data[i].cont_no );
+               if(result.data[i].type=="ask")
+                tmpType = "매도";
+            else
+                tmpType = "매수";
+
+            var transState = "<tr'>"
+            transState += "<td>"+result.data[i].transaction_date +"</td>";
+            transState += "<td>"+tmpType+"</td>";
+            transState += "<td align='right'>"+comma(result.data[i].price)+"</td>";
+            transState += "<td align='right'>"+result.data[i].units_traded+"</td>";
+            transState += "<td align='right'>"+comma(result.data[i].total)+"</td>";
+            transState += "</tr>";
+                 //$('#buy').prepend(appendData);  
+                 $('#transactions_history tr:first').after(transState); 
+             }
+             
+         });
+}
+
+function mcc_buy() {
+
+
+    var d = new Date();
+
+    var now = d.getFullYear()+"-"+(d.getMonth() + 1) +"-"+ d.getDate() +" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+
+    var mcc = Math.floor((Math.random() * 1000) + 1) ;
+    var units_traded = Math.floor((Math.random() * 5) + 1) ;
+
+    var buy_price = "<tr'>"
+    buy_price += "<td>"+comma(mcc)+" | "+now+"</td>";
+    buy_price += "<td align='right'>"+units_traded +"</td>";
+                    buy_price += "<td  align='right'>"+units_traded +"</td>";//buy_price += "<td>누적수량(BTC)</td>";
+                    buy_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+
+
+                 //$('#buy').prepend(appendData);
+                 $('#table_buy tr:first').after(buy_price); 
+
+             }//mcc_buy
+
+
+             function mcc_sell() { 
+                var d = new Date(); 
+                var now = d.getFullYear()+"-"+(d.getMonth() + 1) +"-"+ d.getDate() +" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+                var mcc = Math.floor((Math.random() *1000) + 1);
+                var units_traded = Math.floor((Math.random() * 5) + 1);
+
+                var sell_price = "<tr'>";
+                sell_price += "<td >"+comma(mcc)+" | "+now+"</td>";
+                sell_price += "<td align='right' >"+units_traded+"</td>";
+                    sell_price += "<td align='right'>"+units_traded+"</td>";//sell_price += "<td>누적수량(BTC)</td>";
+                    sell_price += "</tr>";
+                    //$('#buy').prepend(appendData);
+
+                    $('#table_sell tr:first').after(sell_price); 
+            }// mcc_sell() 
+
+
+
+            function mcc_deal() 
+            {
+               var url = "trading_deal_list.php";
+
+               $.getJSON(url, function(result){ 
+                var data = "";
+                data = [result.data];
+
+                var buy_price = "<tr'>"
+                buy_price += "<td>"+comma(data[0].buy_price)+" | "+data[0].date+"</td>";
+                buy_price += "<td>"+data[0].units_traded+"</td>";
+                buy_price += "<td>누적수량(BTC)</td>";
+                buy_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+
+                 var sell_price = "<tr'>"
+                 sell_price += "<td >"+comma(data[0].sell_price)+" | "+data[0].date+"</td>";
+                 sell_price += "<td align='right'>"+data[0].units_traded+"</td>";
+                sell_price += "<td align='right'>"+data[0].units_traded+"</td>";//sell_price += "<td>누적수량(BTC)</td>";
+                sell_price += "</tr>";
+                 //$('#buy').prepend(appendData);
+                 $('#table_buy tr:first').after(buy_price); 
+                 $('#table_sell tr:first').after(sell_price); 
+             });   
+
+           }
+
+           function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+    }//function comma(str)
+
+
+
+function memData(userID)
+{
+
+    var jURL ="getUserData.php";
+    var  param = {userID:userID};
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        url: jURL,
+        data:param,
+        cache: false,
+        //dataType: "json",
+        success: function(data)
+        { 
+            var obj = $.parseJSON(data);
+
+            $("#myWallet").val(obj[0].myWallet);
+            $("#myPOINT").val(obj[0].MyCash);
+            $("#myMCC").val(obj[0].MCC);
+            $("#myKRW").val(obj[0].currency);
+ 
+            $("#buy_pos").val(obj[0].MyCash);
+            $("#sell_pos").val(obj[0].MCC);
+
+        },
+        error:function(e){
+            alert("Data read 에러  ");
+        }
+    }); 
+}//func
+</script>
+
+
+</body>
+<style>
+.table_buy {
+    display: block;
+    width: 320px;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+.table_buy tbody {
+    display: block;
+    height: 200px;
+    overflow: auto;
+}
+
+#dialog-background {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:  rgba(255,255,255,.2);
+    z-index: 10000;
+}
+#my-dialog {
+
+    position: fixed;
+    left: calc( 50% - 350px ); top: calc( 50% - 200px );
+    width: 700px; height: 500px; 
+    background: #fff;
+    z-index: 11000;
+    padding: 10px;
+}
+
+#dialog-TradeList-background {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:  rgba(255,255,255,.2);
+    z-index: 10000;
+}
+#my-TradeList-dialog_wrap {
+
+    position: fixed;
+    left: calc( 50% - 450px ); top: calc( 50% - 350px );
+    width: 900px; height: 700px; 
+    background: #fff;
+    overflow-y: scroll;
+    z-index: 11000;
+    padding: 10px;
+}
+
+
+</style>
+ 
+</html>

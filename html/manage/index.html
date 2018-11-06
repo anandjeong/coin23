@@ -1,0 +1,173 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/manage/common/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/manage/common/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/manage/common/css/datatables.min.css">
+    <script src="/manage/common/js/jquery-3.3.1.min.js"></script>
+    <script src="/manage/common/js/jquery.cookie.js"></script>
+    <script src="/manage/common/js/default.js"></script>
+    <script src="/manage/common/js/datatables.min.js"></script>
+    <script src="/manage/common/js/fnc.js"></script>
+	<title>ADMIN</title>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div class="divBtn" cKind="home">홈</div>			
+			</div>
+			<div>
+				<div class="divBtn" cKind="logout">로그아웃</div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div id="closeDiv"><<</div>
+				<div id="menuDiv">
+					<div>Coin23 관리</div>
+					<div class="menuBtn" cType="mList" cKind="pageMove">회원리스트</div>
+<!--
+					<div class="menuBtn" cType="cList" cKind="pageMove">코인리스트</div>
+-->
+					<div class="menuBtn" cType="rkList" cKind="pageMove">입출금리스트(원화)</div>
+					<div class="menuBtn" cType="rcList" cKind="pageMove">입출금리스트(코인)</div>
+					<div>
+						<div>고객센터</div>
+						<div style="display:block;">
+							<div>공지사항</div>
+							<div>뉴스</div>
+							<div>자주하는질문</div>
+							<div>1:1문의</div>
+							<div>이용문의</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="menuDiv1">
+					<div>Coin23 관리</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">회원</div>
+						<div>
+							<div>
+								<div class="menuBtn" cType="mList" cKind="pageMove">회원리스트</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">고객센터</div>
+						<div>
+							<div>
+								<div>공지사항</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>뉴스</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>자주하는질문</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>1:1문의</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>이용문의</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">거래소</div>
+						<div>
+							<div>
+								<div>환경설정</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>매출현황</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>매출현황-코인별</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">입출금</div>
+						<div>
+							<div>
+								<div class="menuBtn" cType="rkList" cKind="pageMove">원화리스트</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div class="menuBtn" cType="rcList" cKind="pageMove">코인리스트</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">거래내역</div>
+						<div>
+							<div>
+								<div class="menuBtn" cType="trList1" cKind="pageMove">거래내역</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div class="menuBtn" cType="trList2" cKind="pageMove">거래대기</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menuBtn" cKind="menuTitle">관리자</div>
+						<div>
+							<div>
+								<div>관리자</div>
+								<div><div></div></div>
+							</div>
+							<div>
+								<div>관리자로그</div>
+								<div><div></div></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div id="contentDiv"></div>
+				<div id="footerDiv"></div>
+			</div>
+		</div>
+			
+		<div id="loginFrm">
+			<div>
+				<div>
+					<div>
+						<div class="divBtn" cKind="home">홈</div>
+					</div>
+					<div>로그인 정보입력</div>
+				</div>
+				<div>
+					<div>아이디</div>
+					<div><input name="id"></div>
+				</div>
+				<div>
+					<div>비밀번호</div>
+					<div><input name="pwd"></div>
+				</div>
+				<div>
+					<div>
+						<div class="divBtn" cKind="login">로그인</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="backDiv"></div>
+	</body>
+</html>

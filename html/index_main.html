@@ -1,0 +1,272 @@
+<?include_once $_SERVER['DOCUMENT_ROOT']."/json/sesChk.php"?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#333">
+    <title>Coin23 | 거래소</title>
+    <meta name="description" content="BESIDE">
+    <link rel="shortcut icon" href="newmain/assets/img/favicon.png?v=3">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="newmain/assets/css/preload.min.css">
+    <link rel="stylesheet" href="newmain/assets/css/plugins.min.css">
+    <link rel="stylesheet" href="newmain/assets/css/style.light-blue-500.min.css">
+   
+  </head>
+  <body>
+	<input type="hidden" name="sesId" value="<?=$sesId?>">
+<input type="hidden" name="sesName" value="<?=$sesName?>">
+<input type="hidden" name="sesBtc" value="<?=$sesBtc?>">
+<input type="hidden" name="sesEth" value="<?=$sesEth?>">
+<input type="hidden" name="rSymbol" value="<?=$symbol?>">
+<input type="hidden" name="loginSt" value="<?=$login?>">  
+    <div id="ms-preload" class="ms-preload">
+		
+      <div id="status">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+  
+														 
+    <div class="ms-site-container ms-nav-fixed">
+		
+      <nav class="navbar navbar-expand-md navbar-fixed ms-lead-navbar navbar-mode navbar-mode mb-0" id="navbar-lead">
+        <div class="container container-full">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <!-- <img src="assets/img/demo/logo-navbar.png" alt=""> --><img src=" images/logo2.png" width="170" height="50" alt=""/></span>
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="trading/btc.html">거래소</a>
+              </li>
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="/wallets.html">자산</a>
+              </li>
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="/custom.html">고객센터</a>
+              </li>
+              <li class="nav-item">
+                <a data-scroll class="nav-link" href="help.html">이용안내</a>
+              </li>
+				 <li class="nav-item">
+                <a data-scroll class="nav-link" href="/login.html">로그인</a>
+              </li>
+				<li class="nav-item">
+                <a class="aBtn" cKind="logout">로그아웃</a>
+              </li>
+				  <li class="nav-item">
+                <a data-scroll class="nav-link" href="register.html">회원가입</a>
+              </li
+            </ul>
+          </div>
+          <!-- navbar-collapse collapse -->
+          <a href="javascript:void(0)" class="ms-toggle-left btn-navbar-menu">
+            <i class="zmdi zmdi-menu"></i>
+          </a>
+         
+        </div>
+        <!-- container -->
+      </nav>
+      <div class="intro-full ms-hero-img-city2 ms-hero-bg-primary color-white" id="home">
+       
+          <div class="container" style="padding-top: 50px">
+			  
+            <div class="text-center mb-4">
+              <img src="images/main.png" width="100%" height="100%" alt=""/>
+            
+			<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-filled" >
+                       
+                        <div class="panel-body">
+                            <div class="table-responsive">
+
+                                <table  class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="15%">코인이름</th>
+                                        <th width="12%">심벌</th>
+                                        <th width="21%">현재가격 KRW</th>
+                                        <th width="18%">24최고가 KRW</th>
+                                        <th width="18%">24최저가 KRW</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+									<td><a href="trading/btc.html">	비트코인</a></td>
+                                        <td><span style="color:#ffffff">BTC</span></td>
+                                        <td><span id="BTC_currentPrice" style="color:#8AB98A">7,500,000</span></td>
+                                        <td><span id="BTC_h_24" style="color:#ffffff">7,800,000</span></td>
+                                        <td><span id="BTC_l_24" style="color:#ffffff">7,200,000</span></td>
+                                    </tr>
+									  <tr>
+										<td><span style="color:#ffffff"><a href="trading/bch.html">비트코인캐시</a></span></td>
+                                        <td><span style="color:#ffffff">BCH</span></td>
+                                        <td><span style="color:#8AB98A">500,000</span></td>
+                                        <td><span style="color:#ffffff">550,000</span></td>
+                                        <td><span style="color:#ffffff">490,000</span></td>
+                                    </tr>	
+                                    <tr>
+                                        <td><span style="color:#ffffff"><a href="trading/eth.html">이더리움</a></span></td>
+                                        <td><span style="color:#ffffff">ETH</span></td>
+                                        <td><span id="ETH_currentPrice" style="color:#8AB98A">250,000</span></td>
+                                        <td><span id="ETH_h_24"  style="color:#ffffff">270,000</span></td>
+                                        <td><span id="ETH_l_24" style="color:#ffffff">230,000</span></td>
+                                    </tr>
+									 <tr>
+										<td><span style="color:#ffffff"><a href="trading/dash.html">대시</a></span></td>
+                                        <td><span style="color:#ffffff">DASH</span></td>
+                                        <td><span style="color:#8AB98A">500,000</span></td>
+                                        <td><span style="color:#ffffff">550,000</span></td>
+                                        <td><span style="color:#ffffff">490,000</span></td>
+                                    </tr>
+									 <tr>
+										<td><span style="color:#ffffff"><a href="trading/ltc.html">라이트코인</a></span></td>
+                                        <td><span style="color:#ffffff">LTC</span></td>
+                                        <td><span style="color:#8AB98A">59,000</span></td>
+                                        <td><span style="color:#ffffff">60,000</span></td>
+                                        <td><span style="color:#ffffff">58,000</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff"><a href="trading/mcc.html">매직코인</a></span></td>
+                                        <td><span style="color:#ffffff">MCC</span></td>
+                                        <td><span style="color:#8AB98A">500</span></td>
+                                        <td><span style="color:#ffffff">700</span></td>
+                                        <td><span style="color:#ffffff">500</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff"><a href="trading/game.html">매직게임</a></span></td>
+                                        <td><span style="color:#ffffff">GAME</span></td>
+                                        <td><span style="color:#8AB98A">200</span></td>
+                                        <td><span style="color:#ffffff">250</span></td>
+                                        <td><span style="color:#ffffff">150</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff"><a href="trading/rtlt.html">렌탈토큰</a></span></td>
+                                        <td><span style="color:#ffffff">RTLT</span></td>
+                                        <td><span style="color:#8AB98A">100</span></td>
+                                        <td><span style="color:#ffffff">190</span></td>
+                                        <td><span style="color:#ffffff">100</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            </div>
+           
+          </div>
+       
+      </div>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+          <i class="zmdi zmdi-long-arrow-up"></i>
+        </a>
+      </div>
+      <div class="bg-light index-1 intro-full-next pt-6">
+        <div class="container" >
+			<div class="col-lg-12">
+                    
+                   <div>
+                
+                   <img  src="images/main2.png" width="100%" height="100%" />
+              
+        </div>
+				</div>
+		  </div>
+       
+        
+       <!-- 탭새로추가 -->
+	 
+		<footer class="ms-footer">
+			<div class="container">
+				<div class="row">
+					
+				  <ul class="col-md-6 footer-widget-container">
+						<li class="widget widget_newsletterwidget">
+							<div class="title">
+								<h3>ABOUT OUR COMPANY</h3>
+							</div>
+							<ul class="contact-info-list">
+								<li><strong>(주)비지씨코리아</strong></li>
+								<li>ADDRESS : 인천광역시 </li> 
+								<li>대표 : 김종섭</li>
+								<li>정보책임 관리자 : 정대철</li>
+								<li>E-Mail : info@coin23.io</li>
+							</ul>
+							<br/>
+						</li>
+					</ul>
+				</div>
+
+
+			</div>
+		</footer>  
+        <footer class="ms-footer">
+          <div class="container">
+            <p>After Copyright Reserve  Coin23  2018 </p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- ms-site-container -->
+    <div class="ms-slidebar sb-slidebar sb-left sb-momentum-scrolling sb-style-overlay">
+      <header class="ms-slidebar-header">
+       
+        <div class="ms-slidebar-title">
+        
+          <div class="ms-slidebar-t">
+            <span class="ms-logo ms-logo-sm">Coin23</span>
+            <h3>거래소 
+             
+            </h3>
+          </div>
+        </div>
+      </header>
+      <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+	    <li>
+                <a data-scroll class="link" href="trading/trading_main.html?state=MCC">거래소</a>
+              </li>
+        <li>
+                <a data-scroll class="link" href="/wallets.html">자산</a>
+              </li>
+        <li>
+                <a data-scroll class="link" href="/custom.html">고객센터</a>
+              </li>
+        <li>
+                <a data-scroll class="link" href="help.html">이용안내</a>
+              </li>
+	    <li>
+                <a data-scroll class="link" href="/login.html">로그인</a>
+              </li>
+		<li>
+                <a class="aBtn" cKind="logout">로그아웃</a>
+              </li>
+	    <li>
+                <a data-scroll class="link" href="register.html">회원가입</a>
+              </li
+       
+      </ul>
+   
+  </div>
+    <script src="newmain/assets/js/plugins.min.js"></script>
+    <script src="newmain/assets/js/app.min.js"></script>
+    <script src="newmain/assets/js/lead-full.js"></script>
+    <script src="/common/js/default.js"></script>
+  </body>
+</html>

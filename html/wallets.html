@@ -1,0 +1,273 @@
+<?if($_REQUEST["pType"]!="pageload"){?>
+<?include_once $_SERVER['DOCUMENT_ROOT']."/skin/index.html"?>
+<?exit;?>
+<?}?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Page title -->
+    <title>Coin23 | 자산</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="styles/pe-icons/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="styles/pe-icons/helper.css"/>
+    <link rel="stylesheet" href="styles/stroke-icons/style.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="/common/css/default.css">
+</head>
+<body style="background: rgba(39,59,95,1.00)">
+
+<!-- Wrapper-->
+<div class="wrapper">
+
+    <!-- Header-->
+    <nav class="navbar navbar-default navbar-fixed-top" >
+        <div class="container-fluid" style="background: rgba(00,00,33,1.00) ">
+            <div class="navbar-header">
+                <div id="mobile-menu">
+                    <div class="left-nav-toggle">
+                        <a href="#">
+                            <i class="stroke-hamburgermenu"></i>
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-brand" href="index.html" style="background: rgba(00,00,33,1.00) ">
+                   <img src="images/logo.png" alt="image" width="187" height="37"  />
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="left-nav-toggle ">
+                    <a href="">
+                        <i class="stroke-hamburgermenu"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav ">
+                    <li class=" profil-link">
+                        <a href="trading/btc.html"><span  style="font-size:1.1em; color:#ffffff">거래소 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="wallets.html">
+                        <span style="font-size:1.1em; color:#ffffff">자산 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="custom.html">
+                        <span style="font-size:1.1em; color:#ffffff">고객센터 :</span>
+                        </a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="help.html">
+                        <span style="font-size:1.1em; color:#ffffff">이용안내 </span></a>
+                    </li>
+				<li class=" profil-link">
+                      
+                    </li>	
+              </ul>
+				<ul class="nav navbar-nav navbar-right">
+                   
+					<li class=" profil-link">
+                        <a href="login.html">
+                        <span style="font-size:1.1em; color:#ffffff">로그인 :</span></a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="register.html">
+                        <span style="font-size:1.1em; color:#ffffff">회원가입 :</span></a>
+                    </li>
+					<li class=" profil-link">
+                        <a href="#">
+                        <span style="font-size:1.1em; color:#ffffff">한국어 </span></a>
+                    </li>
+					<li class=" profil-link">
+                      
+                    </li>
+					
+              </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End header-->
+</div>
+ <aside class="navigation" style="background: rgba(00,00,33,1.00) ">
+        <nav >
+            <ul class="nav luna-nav">
+                <li>
+                    <a href="register.html"><span style="color:#ffffff">회원가입</span></a>
+                </li>
+                <li>
+                    <a href="login.html"><span style="color:#ffffff">로그인</span></a>
+                </li>
+				 <li>
+                    <a href="trading/btc.html"><span style="color:#ffffff">거래소</span></a>
+                </li>
+				<li>
+                    <a href="wallets.html"><span style="color:#ffffff">자산</span></a>
+                </li>
+
+                <li class="nav-info">
+                    <div class="m-t-xs">
+                        <span class="c-white">Example</span> text.
+                        <br/>
+                        <!-- HOW TO REMOVE THIS SECTION -->
+                        <!--<span>
+                            If you don't want to have this section, just remove it from html and in your css replace:
+                            .navigation:before { background-color: #24262d; } with
+                            .navigation:before { background-color: #2a2d35; }
+                            and
+                            .navigation { background-color: #24262d; }</code> with <code>.navigation { background-color: #2a2d35; }
+                        </span>-->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+<section class="content" style="background: rgba(39,59,95,1.00)">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12" style="display:flex;">
+					<div style="flex:0 0 100px;">
+					<h3>자산관리</h3>
+					</div>
+					<div style="flex:0 0 115px; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; padding-bottom:10px;">
+						<div class="btnDiv" cKind="history" style="background-color:#000000; padding:2px 5px; border:1px solid #EFEFEF; border-radius:5px; color:#FF0000; font-weight:bold;">입출금신청내역</div>
+					</div>
+					<div style="flex:1 1 auto;"></div>
+				</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-filled" >
+                       
+                        <div class="panel-body">
+                            <div class="table-responsive">
+
+                                <table id="tableExample3" class="table table-striped table-hover infoList">
+                                    <thead>
+                                    <tr>
+                                        <th width="16%">코인이름</th>
+                                        <th width="10%">심벌</th>
+                                        <th width="18%" style="text-align:center;">보유자산</th>
+                                        <th width="18%" style="text-align:center;">보류자산</th>
+                                        <th width="14%">입금신청</th>
+                                        <th width="14%">출금신청</th>
+                                        <th width="10%">지갑</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+									<tr>
+										<td><span style="color:#ffffff">원화</span></td>
+                                        <td><span style="color:#ffffff">KRW</span></td>
+                                        <td><span style="color:#8AB98A">0</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+                                        <td><a href="wallets/krw_in.html" class="btn btn-w-md btn-success btn-squared">입금 KRW</a></td>
+										<td><a href="wallets/krw_out.html" class="btn btn-w-md btn-success btn-squared">출금 KRW</a></td>
+										<td><!--<a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="KRW">생성</a>--></td>
+                                    </tr>	
+                                    <tr>
+										<td><span style="color:#ffffff">비트코인</span></td>
+                                        <td><span style="color:#ffffff">BTC</span></td>
+                                        <td><span style="color:#8AB98A">0.00000000</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+                                        <td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="BTC" cKind="inCoin">입금 BTC</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="BTC" cKind="outCoin">출금 BTC</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="BTC">생성</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff">이더리움</span></td>
+                                        <td><span style="color:#ffffff">ETH</span></td>
+                                        <td><span style="color:#8AB98A">0,00000000</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="ETH" cKind="inCoin">입금 ETH</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="ETH" cKind="outCoin">출금 ETH</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="ETH">생성</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff">매직코인</span></td>
+                                        <td><span style="color:#ffffff">MCC</span></td>
+                                        <td><span style="color:#8AB98A">0.00000000.</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+                                        <td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="MCC" cKind="inCoin">입금 MCC</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="MCC" cKind="outCoin">출금 MCC</a></td>
+										<td><!--
+											<a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="MCC">생성</a>-->
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff">매직게임</span></td>
+                                        <td><span style="color:#ffffff">GAME</span></td>
+                                        <td><span style="color:#8AB98A">0.00000000</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+                                        <td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="GAME" cKind="inCoin">입금 GAME</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="GAME" cKind="outCoin">출금 GAME</a></td>
+										<td><!--
+											<a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="GAME">생성</a>-->
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="color:#ffffff">렌탈토큰</span></td>
+                                        <td><span style="color:#ffffff">RTLT</span></td>
+                                        <td><span style="color:#8AB98A">0.00000000</span></td>
+                                        <td><span style="color:#ffffff">0</span></td>
+                                        <td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="RTLT" cKind="inCoin">입금 RTLT</a></td>
+										<td><a class="btn btn-w-md btn-success btn-squared aBtn" symbol="RTLT" cKind="outCoin">출금 RTLT</a></td>
+										<td><!--
+											<a class="btn btn-w-md btn-success btn-squared aBtn" cKind="walletCreate" symbol="RTLT">생성</a>-->
+										</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+<section class="content" >
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="header-title">
+                            <h4>Coin23 Trading 대표 : 정대철 정보책임자 : 정대철</h4>
+							<h4>주소 :  이메일 : info@coin23.io</h4>
+                            <h5>
+                                Copyright after 2018 coin23
+                            </h5>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+    </section>
+<script src="vendor/pacejs/pace.min.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- App scripts -->
+<script src="scripts/luna.js"></script>
+
+</body>
+
+</html>

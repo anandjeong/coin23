@@ -1,0 +1,273 @@
+html, body {
+    width:100%;
+    height:100%;
+}
+
+body{
+	display:flex; flex-direction:column; position:relative;
+}
+
+.divBtn{
+	border:1px solid #000000;
+	height:18px; font-size:12px;
+	display:flex; justify-content:center; align-items:center;
+}
+
+.divBtn[cKind='tranHistory']{
+	border:0px;
+}
+
+.divBtn[cKind='tranHistory']:hover{
+	background-color:transparent;
+}
+
+.menuBtn:hover, .divBtn:hover{
+	cursor:pointer;
+}
+
+.curMenu, .divBtn:hover{
+	background-color:#DDDFDD;
+}
+
+body>div:first-child{
+	flex:0 0 45px; background-color:#DCDCDC;
+	display:flex; flex-direction:row;
+}
+
+body>div:first-child>div:first-child{
+	flex:1 1 auto; display:flex; justify-content:flex-start; align-items:center;
+}
+
+body>div:first-child>div:first-child>div{
+	width:20px; background-color:#FFFFFF; padding:5px; border:1px solid #000000; border-radius:15px; margin-left:5px;
+}
+
+body>div:first-child>div:last-child{
+	flex:0 0 120px; display:flex; justify-content:flex-end; align-items:flex-end;
+}
+
+body>div:first-child>div:last-child>div{
+	border:0px; padding-right:5px;
+}
+
+body>div:nth-child(2){
+	flex:1 1 auto; display:flex; flex-direction:row;
+}
+
+body>div:nth-child(2)>div:first-child{
+	flex:0 0 170px; background-color:#999999; display:flex; flex-direction:column;
+}
+
+#closeDiv{
+	display:flex; justify-content:flex-end; align-items:flex-end;
+}
+
+#menuDiv{
+	padding:15px 0px; display:none;
+}
+
+#menuDiv>div:first-child{
+	text-align:center; margin-bottom:10px;
+
+}
+
+#menuDiv>div:nth-child(1n+2){
+	display:flex; justify-content:flex-end; align-items:flex-end; padding:5px;
+}
+
+
+#menuDiv1{
+	text-align:right; padding:5px;
+}
+
+
+#menuDiv1>div{
+	padding:5px 0px; border-bottom:1px solid #FFFFFF;
+}
+
+#menuDiv1>div:first-child{
+	text-align:center; font-size:20px; font-weight:bold;
+}
+
+#menuDiv1>div>div:first-child{
+	font-weight:bold; padding-bottom:5px;
+}
+
+#menuDiv1>div>div:last-child{
+	display:none; border-top:1px solid #FF0000;
+}
+
+#menuDiv1>div>div:last-child>div{
+	padding-top:5px; display:flex; flex-direction:row;
+}
+
+#menuDiv1>div>div:last-child>div div:first-child{
+	flex:1 1 auto; text-align:right; padding-right:5px;
+}
+
+#menuDiv1>div>div:last-child>div>div:last-child{
+	height:15px; flex:0 0 15px; border:1px solid #FFFFFF; border-radius:8px;
+	display:flex; justify-content:center; align-items:center;
+}
+
+#menuDiv1>div>div:last-child>div>div:last-child>div{
+	height:1px; background-color:#FFFFFF;
+}
+
+body>div:nth-child(2)>div:nth-child(2){
+	flex:1 1 auto; background-color:#CCCCCC; display:flex; flex-direction:column;
+}
+
+#contentDiv>div>div:first-child{
+	font-size:24px; font-weight:bold; background-color:#DCDCDC; padding:10px;
+	border-radius: 10px 10px 0px 0px; border:1px solid #FFFFFF;
+}
+
+#contentDiv>div:first-child>div:first-child{
+	display:flex; flex-direction:row;
+}
+
+#contentDiv>div:first-child>div:first-child>div:first-child{
+	flex:0 0 220px;
+}
+
+#contentDiv>div:first-child>div:first-child>div:last-child{
+	flex:1 1 auto; display:flex; justify-content:flex-start; align-items:flex-end;
+}
+
+#contentDiv>div:first-child>div:first-child>div:last-child>div{
+	width:65px; border-radius:5px;
+}
+
+#contentDiv>div:nth-child(2){
+	margin-top:25px;
+}
+
+#contentDiv>div:nth-child(2)>div:first-child{
+	font-size:20px;
+}
+
+#contentDiv{
+	flex:1 1 auto; background-color:#FFFFFF; padding:15px 25px;
+}
+
+#contentDiv>div>div:nth-child(2){
+	font-size:12px;
+	margin-top:15px;
+}
+
+#contentDiv table th{
+	font-weight:bold; font-size:18px; color:#C0C0C0;
+}
+
+#contentDiv table td{
+	font-weight:normal; font-size:14px; 
+}
+/*
+#contentDiv table th, #contentDiv table td{
+	border:1px solid #000000;
+	padding:5px;
+}
+*/
+#contentDiv table th:nth-child(1)
+, #contentDiv table th:nth-child(7)
+, #contentDiv table th:nth-child(8){
+	width:80px;
+}
+
+#contentDiv table th:nth-child(2){
+	width:60px;
+}
+
+#contentDiv table th:nth-child(3)
+, #contentDiv table th:nth-child(6)
+, #contentDiv table th:nth-child(9){
+	width:160px;
+}
+
+#contentDiv table th:nth-child(4)
+, #contentDiv table th:nth-child(5){
+	width:120px;
+}
+
+#contentDiv table th:nth-child(7){
+	width:100px;
+}
+
+#contentDiv table th:nth-child(10){
+	width:60px;
+}
+
+#contentDiv table td:nth-child(1n+1){
+	text-align:center;
+}
+
+#contentDiv table td:nth-child(6){
+	text-align:right;
+}
+
+
+#footerDiv{
+	flex:0 0 45px; background-color:#FF0000;
+}
+
+
+#loginFrm, #backDiv{
+	background-color:rgba(53, 64, 87, 0.8); position:fixed; top:0; left:0; width:100%; height:100%;
+}
+
+#backDiv{
+	display:none;
+}
+
+#loginFrm>div{
+	background-color:#EFEFEF; border:1px solid #000000;
+	position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; width:650px; height:300px; margin-top:5%;
+	display:flex; flex-direction:column; justify-content:center; align-items:center;
+}
+
+#loginFrm>div>div{
+	width:450px;
+}
+
+#loginFrm>div>div:nth-child(1){
+	font-weight:bold; font-size:20px; padding:10px; display:flex;
+}
+
+#loginFrm>div>div:nth-child(1)>div:first-child{
+	flex:0 0 20px;
+}
+
+#loginFrm>div>div:nth-child(1)>div:first-child>div{
+	width:20px; background-color:#FFFFFF; padding:5px; border:1px solid #000000; border-radius:15px;
+}
+
+#loginFrm>div>div:nth-child(1)>div:last-child{
+	flex:1 1 auto; display:flex; justify-content:center; align-items:center;
+}
+
+#loginFrm>div>div:nth-child(1n+2){
+	display:flex; flex-direction:row; border-top:1px solid #000000; height:35px;
+}
+
+#loginFrm>div>div:nth-child(1n+2)>div:first-child{
+	font-weight:bold; flex:0 0 85px; background-color:#696969; color:#FFFFFF;
+	display:flex; justify-content:flex-start; align-items:center; padding-left:5px;
+}
+
+#loginFrm>div>div:nth-child(1n+2)>div:last-child{
+	padding:5px;
+	flex:1 1 auto; display:flex; justify-content:stretch; align-items:stretch;
+}
+
+#loginFrm>div>div:nth-child(1n+2)>div:last-child>input{
+	flex:1 1 auto;
+}
+
+#loginFrm>div>div:last-child>div:first-child{
+	background-color:#EFEFEF;
+}
+
+#loginFrm>div>div:last-child>div:first-child>div.divBtn{
+	width:100%; height:25px; color:#000000;	border-radius:5px;
+}

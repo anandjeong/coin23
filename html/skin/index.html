@@ -1,0 +1,51 @@
+<?include_once $_SERVER['DOCUMENT_ROOT']."/json/sesChk.php"?>
+<?
+	$symbol = $_REQUEST["symbol"];
+	$http_host = $_SERVER['HTTP_HOST'];
+	$request_uri = $_SERVER['REQUEST_URI'];
+	$dName = explode("/", $request_uri)[1];
+	if($dName=="wallets"){
+		$prevPage = $_SERVER['HTTP_REFERER'];
+		switch($symbol){
+			case "BTC":
+				if($sesBtc==""){
+					echo "<script>alert('지갑생성이 되지않았습니다.'); history.back();</script>";
+				}
+				break;
+			case "":
+				break;
+			default:
+				if($sesEth==""){
+					echo "<script>alert('지갑생성이 되지않았습니다.'); history.back();</script>";
+				}
+				break;
+		}
+	}
+
+	$footerFile = "";
+	switch($dName){
+		case "trading":
+			$footerFile = "footer_".$dName.".html";
+			break;
+		default:
+			$footerFile = "footer.html";
+			break;
+	}
+?>
+<!DOCTYPE html>
+<html>
+<?include_once $_SERVER['DOCUMENT_ROOT']."/skin/head.html"?>
+<body style="background: rgba(39,59,95,1.00)">
+<input type="hidden" name="sesId" value="<?=$sesId?>">
+<input type="hidden" name="sesName" value="<?=$sesName?>">
+<input type="hidden" name="sesBtc" value="<?=$sesBtc?>">
+<input type="hidden" name="sesEth" value="<?=$sesEth?>">
+<input type="hidden" name="rSymbol" value="<?=$symbol?>">
+<input type="hidden" name="loginSt" value="<?=$login?>">
+<?include_once $_SERVER['DOCUMENT_ROOT']."/skin/header.html"?>
+<section class="content" style="background: rgba(39,59,95,1.00)">
+
+</section>
+<?include_once $_SERVER['DOCUMENT_ROOT']."/skin/".$footerFile?>
+</body>
+</html>

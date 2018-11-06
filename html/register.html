@@ -1,0 +1,156 @@
+<?include_once $_SERVER['DOCUMENT_ROOT']."/json/sesChk.php"?>
+<?
+	$recomId = "";
+	if(isset($_REQUEST['uName'])){
+		$recomId = $_REQUEST['uName'];
+	}
+
+	echo $recomId;
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Page title -->
+    <title>Coin23 | 회원가입</title>
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css"/>
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="styles/pe-icons/pe-icon-7-stroke.css"/>
+    <link rel="stylesheet" href="styles/pe-icons/helper.css"/>
+    <link rel="stylesheet" href="styles/stroke-icons/style.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="blank " >
+
+<!-- Wrapper-->
+<div class="wrapper">
+
+
+    <!-- Main content-->
+    <section class="content" style="background: rgba(39,59,95,1.00)">
+        <div class="back-link">
+            <a href="index.html" class="btn btn-accent">Back to Home</a>
+        </div>
+
+        <div class="container-center lg animated slideInDown">
+
+
+            <div class="view-header">
+                <div class="header-icon">
+                    <i class="pe page-header-icon pe-7s-add-user"></i>
+                </div>
+                <div class="header-title">
+                    <h3>회원가입</h3>
+                   
+					<span style="color:#ffffff">Please enter your data to register.</span>
+                  
+                </div>
+            </div>
+
+            <div class="panel panel-filled">
+                <div class="panel-body">
+                    <p>
+
+                    </p>
+                    <form name="frmSignUp" id="frmSignUp" onsubmit="return false;" novalidate>
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <label>이메일</label>
+								<div style="display:flex; flex-direction:row; justify-content:flex-start; align-items:center;">
+									<div style="flex:1 1 auto;">
+									<input class="form-control" type="email" id="loginName" name="loginName">
+									</div>
+									<div style="display:flex; flex:0 0 80px;">
+									<button class="btn btn-default btnDiv" id="send-check-code" type="button" cKind="emailChk" style="align-self:flex-end;">이메일인증</button>
+									</div>
+								</div>
+                                <span style="color:#ffffff">Your address email to contact</span>
+								<input type="hidden" name="dataType" value="json" />
+								<input type="hidden" name="csrfValue" value="" />
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>유저아이디</label>
+								<div style="display:flex; flex-direction:row; justify-content:flex-start; align-items:center;">
+									<div style="flex:1 1 auto;">
+										<input type="" id="userid" name="userid" class="form-control">
+									</div>
+									<div style="display:flex; flex:0 0 80px;">
+										<button class="btn btn-default btnDiv" id="send-check-code" type="button" cKind="idChk" style="font-size:12px;">아이디체크</button>
+									</div>
+								</div>
+                                <span style="color:#ffffff">Your unique userid to app</span>
+                            </div>
+							 <div class="form-group col-lg-6">
+                                <label>유저이름</label>
+                                <input type="" id="username" name="username" class="form-control">
+                                <span style="color:#ffffff">Your unique username to app</span>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>비밀번호</label>
+                                <input type="password" id="loginPassword" name="loginPassword" class="form-control">
+                                <span style="color:#ffffff">Your hard to guess password</span>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>비밀번호 확인</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control">
+                                <span style="color:#ffffff">Please repeat your pasword</span>
+                            </div>
+							<div class="form-group col-lg-6">
+                                <label>핸드폰 번호</label>
+                                <input type="" id="hp" name="hp" class="form-control" >
+                                <span style="color:#ffffff">Your handphone user to app</span>
+                            </div>
+							<div class="form-group col-lg-6">
+                                <label>추천인 아이디</label>
+                                <input type="" id="recoId" name="recoId" class="form-control" value="<?=recomId?>" >
+                                <span style="color:#ffffff">Your enter recommender ID</span>
+                            </div>
+							<div class="form-group col-lg-12">
+								<label>
+									<input type="checkbox" name="termCheck" id="termCheck" value="Yes" required />
+<!--									이용약관 및 개인정보 취급방침관련 안내를 읽었고 동의합니다.-->
+
+									<a href="../../policy/service/index.html" target="_blank">이용약관</a>
+									및
+									<a href="../../policy/privacy/index.html" target="_blank">개인정보 취급방침</a>관련 안내를 읽었고 동의합니다.
+
+								</label>
+							</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-accent btnDiv" cKind="signUp">회원가입</button>
+                            <a class="btn btn-default" href="/login.html">로그인</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End main content-->
+
+</div>
+<!-- End wrapper-->
+
+<!-- Vendor scripts -->
+<script src="/vendor/pacejs/pace.min.js"></script>
+<script src="/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/common/js/default.js"></script>
+
+<!-- App scripts -->
+
+
+</body>
+
+</html>

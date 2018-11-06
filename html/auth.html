@@ -1,0 +1,57 @@
+<?require_once $_SERVER['DOCUMENT_ROOT']."/json/config.php";?>
+<?require_once $_SERVER['DOCUMENT_ROOT']."/json/conf.function.php";?>
+<?require_once $_SERVER['DOCUMENT_ROOT']."/json/init_DB.php";?>
+<?
+
+$authkey=$_GET['auth'];
+$authval=$_GET['tokn'];
+
+backup_save_log($authkey."|".$authval);
+
+if($authkey=="" || $authval==""){
+	show_msg("잘못된 접근입니다");
+	exit;
+}
+
+$cktime = time() - 600;
+$sql = "SELECT * FROM ex_coin_auth WHERE authkey='".$authkey."' AND status = 0 AND regdate > ".$cktime." ORDER BY idx DESC LIMIT 1";
+
+$res = $database->get_results($sql);
+
+if(!$res){
+	$msg="잘못된 접근입니다";
+	showMessage($msg);
+	exit;
+} elseif($database->num_rows($sql)==0){
+	$msg="인증시간이 초과 되었습니다. 다시인증하시기 바랍니다.";
+	showMessage($msg);
+	exit;	
+} else {
+	$row = $database->get_row($sql);
+}
+
+
+if($row[5] == $authval){
+	$qry = "UPDATE ex_coin_auth SET status=1 WHERE idx=".$row[0];
+	$res = $database->query($qry);
+
+	if($res){
+		$msg ="인증되었습니다";
+	}else{
+		$msg ="인증중오류가 발생하였습니다.";
+	}
+	showMessage($msg);
+	exit;
+} else {
+	$msg="인증코드가 일치하지 않습니다. 추가로 메일인증을 누르신경우 최종적으로 받으신 메일로 인증하시기 바랍니다.";
+	showMessage($msg);
+	exit;
+}
+
+function showMessage($msg){
+	echo "<script>";
+	echo "alert('".$msg."');";
+	echo "window.close();";
+	echo "</script>";
+}
+?>

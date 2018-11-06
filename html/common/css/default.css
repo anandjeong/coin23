@@ -1,0 +1,58 @@
+.btnDiv[cKind='history']:hover, .btnDiv[cKind='close']:hover, .btnDiv[cKind='selSymbol']:hover{
+	cursor:pointer;
+}
+
+.curSymbol{
+	background-color:#CCCCCC;
+	color:#FFFFFF;
+}
+
+.btnDiv[cKind='selSymbol']:hover{
+	background-color:#CCCCCC;
+	color:#FFFFFF;
+}
+.aBtn:hover{
+	cursor:pointer !important;
+}
+
+.disabledAbtn:hover{
+	background-color:transparent;
+}
+
+
+#bg_layout{
+	position:fixed; display:none; top:0px; bottom:0px; left:0px; right:0px; background-color:rgba(53, 64, 87, 0.8); z-index:999999;
+}
+
+#bg_layout>div{
+	position:absolute; left:0; right:0; margin-left:auto; margin-right:auto; width:650px; height:390px; background-color:rgba(255, 255, 255, 1); margin-top:5%; padding:5px;
+}
+
+#bg_layout>div>div:nth-child(1){
+	display:flex; flex-direction:column; justify-content:center; align-items:flex-end;
+}
+
+#bg_layout>div>div:nth-child(1)>div{
+	border:1px solid #CCDDEE; border-radius:3px; padding:0px 5px;
+}
+
+#contentDiv{
+	display:flex; flex-direction:column;
+}
+
+#contentDiv>div:nth-child(1)>div:nth-child(2){
+	display:flex; flex-direction:row; margin-top:5px; border-bottom:1px solid #CCDDEE;
+}
+
+#contentDiv>div:nth-child(1)>div:nth-child(2)>div{
+	border:1px solid #CCDDEE; border-bottom:0px; padding:3px 5px 0px 5px; border-radius: 5px 5px 0px 0px;
+}
+
+#contentDiv>div:nth-child(1)>div:nth-child(2)>div:last-child{
+	flex:1 1 auto;
+	border:0px;
+}
+
+#contentDiv>div:nth-child(2){
+	overflow-y:scroll; padding:5px 15px; height:300px;
+}
